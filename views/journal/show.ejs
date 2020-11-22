@@ -1,0 +1,14 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container">
+    <h1 class="mb-1"><%= journal.heading %></h1>
+    <p class="mb-1"><%= journal.content %></p>
+    <a href="/journals" class="btn btn-secondary">See all Journal Entries</a>
+    <a href="/journals/edit/<%= journal._id %>" class="btn btn-info">Edit</a>
+    <form action="/journals/<%= journal._id %>?_method=DELETE" method="POST" class="d-inline">
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+</div>
+
+
+<%- include('../partials/footer.ejs') %>

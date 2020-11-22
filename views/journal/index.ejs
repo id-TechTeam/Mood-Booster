@@ -1,0 +1,20 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container">
+    <h1>Journal index page</h1>
+    <a href="/journals/new">Write</a>
+    <ul>
+        <% journals.forEach(journal => { %>
+        <li>
+            <a href="/journals/<%=journal._id%>">
+                <%= journal.heading %>
+            </a>
+            <p><%= journal.createdAt.toLocaleDateString() %></p>
+        </li>
+
+        <% }) %>
+    </ul>
+</div>
+
+
+<%- include('../partials/footer.ejs') %>

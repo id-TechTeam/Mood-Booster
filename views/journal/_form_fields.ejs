@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label for="header">Heading</label>
+    <input required type="text" name="heading" value="<%= journal.heading %>">
+</div>
+
+<div class="form-group">
+    <label for="content">Content</label>
+    <!-- <input required type="text" name="content" value=""> -->
+    <textarea required name="content" form="journalForm"><%= journal.content %></textarea>
+</div>
+
+<a href="/" class="btn btn-secondary">Cancel</a>
+<button class="btn btn-primary" type="submit">Save</button>

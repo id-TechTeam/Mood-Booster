@@ -1,0 +1,160 @@
+/* 
+The App behaves good at mobile sizes but on full screen it is getting scrollable, need to be fixed, how?
+Does it makes sense to make the Header and Footer absolut? Header feels good but footer looks at some sizes not good.
+
+<Not sure about the hover effect color of the emotion buttons>
+
+*/
+
+
+
+/* ------------------Basics start---------------------- */
+
+* {
+  /* border: 1px solid black; */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: center/cover no-repeat url(/images/clouds.jpg);
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+}
+
+h1,
+.btn {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+/* <<<< Header Start >>>> */
+/* not finished yet here - wrong menu till now*/
+header {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* <<<< Header Start >>>> */
+/* <<<< Footer Start >>>> */
+
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff86;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+#cpyrght {
+  margin-bottom: 2px;
+}
+
+
+/* <<<< Footer end >>>>> */
+/* ------------------ Basics end ---------------------- */
+
+
+/* ------------------ Media start ---------------------- */
+/* not finished yet here */
+@media screen and (min-width:430px) {
+  .mood-txt {
+    font-size: 28px;
+  }
+}
+
+/* ------------------ Media end ---------------------- */
+
+/* ------------------ Home.ejs start ---------------------- */
+
+.content {
+  position: relative;
+  height: 100%;
+}
+
+.drop-wrap {
+  margin: 2% auto;
+}
+
+.drop {
+  width: 25%;
+  fill: #ffffff;
+  margin-bottom: 5%;
+}
+
+h1 {
+  line-height: 45.5px;
+  margin-bottom: 20%;
+}
+
+
+.mood-box {
+  border: 1px solid white;
+  width: 45%;
+  height: 100%;
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 7px;
+  font-size: 26px;
+  margin: auto 0.5%;
+  transition: 0.5s;
+}
+
+
+#moods-wrap {
+
+  position: relative;
+  height: 20em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+}
+
+#moods-wrap .container {
+  height: 40%;
+  width: 100%;
+  margin: 1.5% auto;
+
+}
+
+.bottom-btn {
+  margin-bottom: 2%;
+}
+
+.journal-btn {
+  border: 1px solid #5EA7C8;
+  background: #5EA7C8;
+  font-weight: 700;
+  border-radius: 15px;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.talk-btn {
+  border: 1px solid #5EA7C8;
+  font-weight: 700;
+  border-radius: 15px;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.journal-btn:hover,
+.talk-btn:hover,
+.mood-box:hover {
+  background: white;
+  color: #5EA7C8;
+}
+
+/* ------------------ Home.ejs end ---------------------- */

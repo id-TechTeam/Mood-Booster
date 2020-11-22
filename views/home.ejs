@@ -1,0 +1,38 @@
+<%- include('partials/header.ejs') %>
+
+<div>
+  <div class="content text-center">
+    <div class="drop-wrap container d-flex justify-content-center">
+      <svg class="drop" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="100%">
+        <path d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z" fill="none" />
+        <path
+          d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z" />
+      </svg>
+    </div>
+
+    <div class="container text-center">
+      <div class="header">
+        <h1 class="display-5">How do you feel today?</h1>
+      </div>
+    </div>
+    <div id="moods-wrap" class="container">
+      <div class="container">
+        <a href="/mood/anxious"><button type="button" class="btn mood-box anxious"><span
+              class="mood-txt">Anxious</span></button></a>
+        <a href="/mood/sad"><button type="button" class="btn mood-box"><span class="mood-txt">Sad</span></button></a>
+      </div>
+      <div class="container">
+        <a href="/mood/angry"><button type="button" class="btn mood-box"><span
+              class="mood-txt">Angry</span></button></a>
+        <a href="/mood/lonely"><button type="button" class="btn mood-box"><span
+              class="mood-txt">Lonely</span></button></a>
+      </div>
+    </div>
+    <div class="container bottom-btn">
+      <a href="/journals" type="button" class="btn journal-btn btn-lg btn-block">Open the journal</a>
+      <button type="button" class="btn talk-btn btn-lg btn-block">Talk to someone</button>
+    </div>
+  </div>
+  </main>
+
+  <%- include('partials/footer.ejs') %>
