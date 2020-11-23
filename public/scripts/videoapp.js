@@ -27,7 +27,7 @@ const getCat = async () => {
         const config = {
             headers: {
                 'Accept-Version': 'v1',
-                Authorization: PIC_APP_KEY
+                Authorization: PIC_API_KEY
             }
         }
         const res = await axios.get('https://api.unsplash.com/photos/random?query=kitten', config)
