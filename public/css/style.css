@@ -66,15 +66,7 @@ footer {
 /* ------------------ Basics end ---------------------- */
 
 
-/* ------------------ Media start ---------------------- */
-/* not finished yet here */
-@media screen and (min-width:430px) {
-  .mood-txt {
-    font-size: 28px;
-  }
-}
 
-/* ------------------ Media end ---------------------- */
 
 /* ------------------ Home.ejs start ---------------------- */
 
@@ -90,7 +82,7 @@ footer {
 .drop {
   width: 25%;
   fill: #ffffff;
-  margin-bottom: 5%;
+   margin-bottom: 5%;
 }
 
 h1 {
@@ -158,3 +150,70 @@ h1 {
 }
 
 /* ------------------ Home.ejs end ---------------------- */
+
+/* ------------------ Media start ---------------------- */
+/* not finished yet here */
+@media screen and (min-width:500px) {
+  .drop {
+    margin: 10% auto 1% auto;
+  }
+  h1 {
+    margin-bottom: 10%;
+  }
+}
+
+
+@media screen and (min-width:768px) {
+
+  .bottom-btn {
+    margin-bottom: 4%;
+  }
+
+  .drop {
+    margin-top: 5%;
+  }
+
+  h1 {
+    margin-bottom: 5%;
+  }
+}
+
+
+@media screen and (min-width:991px) {
+
+   .drop {
+ width: 20%;
+  }
+
+  .mood-box {
+    width: 30%;
+  }
+
+  .drop-wrap {
+    margin-top: 0;
+  }
+
+
+  .btn-block {
+    width: 85%;
+    margin: 3px auto;
+  }
+
+#moods-wrap .container:nth-of-type(1) {
+  margin-top: 0;
+}
+
+.drop-wrap.container {
+  margin-bottom: 0;
+}
+}
+
+@media screen and (min-width:1200px) {
+
+  .drop {
+width: 15%;
+ }
+}
+
+
+/* ------------------ Media end ---------------------- */
