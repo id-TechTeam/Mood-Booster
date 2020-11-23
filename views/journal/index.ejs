@@ -1,7 +1,9 @@
-<%- include('../partials/header.ejs') %>
+<%- include('../partials/header-partial-bg.ejs') %>
+<main>
 
-<div class="container">
-    <h1>Journal index page</h1>
+    <div class="partial-bg">
+        <h1>Your Journal</h1>
+    </div>
     <a href="/journals/new">Write</a>
     <ul>
         <% journals.forEach(journal => { %>
@@ -14,7 +16,7 @@
 
         <% }) %>
     </ul>
-</div>
 
+</main>
 
 <%- include('../partials/footer.ejs') %>

@@ -1,0 +1,14 @@
+.footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff86;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  
+  #cpyrght {
+    margin-bottom: 2px;
+  }
+  
