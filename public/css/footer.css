@@ -1,5 +1,5 @@
-.footer {
-    position: absolute;
+#footer {
+    position: absolute !important;
     text-align: center;
     bottom: 0;
     width: 100%;
@@ -12,3 +12,6 @@
     margin-bottom: 2px;
   }
   
+  #content-wrap {
+    padding-bottom: 5%;
+  }
