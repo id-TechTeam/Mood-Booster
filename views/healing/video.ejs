@@ -21,13 +21,23 @@
 
 
         <!-- <h1><%= healing_method %> page</h1> -->
+        <div id="picture" class="container"></div>
+        <div class="container">
+            <div class="col-5 mx-auto">
+                <input type="radio" id="kitten" name="selection" value="kitten" checked>
+                <label for="kitten" class="pr-2">Kitten</label>
 
-        <!-- <button>Click me!</button> -->
-        <div id="cats" class="container"></div>
-        <div class="btn-group btn-group-lg mt-3" role="group" aria-label="Select picture type">
-            <button type="button" class="btn btn-light active">Kitten</button>
-            <button type="button" class="btn btn-light">Puppies</button>
-            <button type="button" class="btn btn-light">Nature</button>
+                <input type="radio" id="puppies" name="selection" value="puppies">
+                <label for="puppies" class="pr-2">Puppies</label>
+
+                <input type="radio" id="nature" name="selection" value="nature">
+                <label for="nature" class="pr-2">Nature</label>
+
+                <button type="button" id="btn" class="btn talk-btn">Select</button>
+                <button type="button" class="btn journal-btn btn-block">Get another Boost</button>
+
+            </div>
+
         </div>
     </div>
 </div>
