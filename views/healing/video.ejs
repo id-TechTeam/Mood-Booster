@@ -1,42 +1,28 @@
-<%- include('../partials/header.ejs') %>
+<%- include('../partials/header-partial-bg.ejs') %>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<div>
-    <div class="content text-center">
+<div class="partial-bg">
+    <h1>Get a cuteness boost</h1>
+</div>
 
-        <div class="drop-wrap container d-flex justify-content-center">
-            <svg class="drop" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="100%">
-                <path d="M24 0H0v24h24V0zm0 0H0v24h24V0zM0 24h24V0H0v24z" fill="none" />
-                <path
-                    d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z" />
-            </svg>
-        </div>
+<div id="picture" class="container"></div>
+<div class="container">
+    <div class="col-5 mx-auto">
+        <input type="radio" id="kitten" name="selection" value="kitten" checked>
+        <label for="kitten" class="pr-2">Kitten</label>
 
-        <div class="container text-center">
-            <div class="header">
-                <h1 class="display-5">Get a cuteness boost</h1>
-            </div>
-        </div>
+        <input type="radio" id="puppies" name="selection" value="puppies">
+        <label for="puppies" class="pr-2">Puppies</label>
+
+        <input type="radio" id="nature" name="selection" value="nature">
+        <label for="nature" class="pr-2">Nature</label>
+
+        <button type="button" id="btn" class="btn talk-btn">Select</button>
+        <button type="button" class="btn journal-btn btn-block">Get another Boost</button>
+
     </div>
 
-        <div id="picture" class="container"></div>
-        <div class="container">
-            <div class="col-5 mx-auto">
-                <input type="radio" id="kitten" name="selection" value="kitten" checked>
-                <label for="kitten" class="pr-2">Kitten</label>
-
-                <input type="radio" id="puppies" name="selection" value="puppies">
-                <label for="puppies" class="pr-2">Puppies</label>
-
-                <input type="radio" id="nature" name="selection" value="nature">
-                <label for="nature" class="pr-2">Nature</label>
-
-                <button type="button" id="btn" class="btn talk-btn">Select</button>
-                <button type="button" class="btn journal-btn btn-block">Get another Boost</button>
-
-            </div>
-
-        </div>
-    </div>
+</div>
+</div>
 </div>
 
 <script src="/scripts/videoapp.js"></script>
