@@ -1,7 +1,10 @@
-<%- include('../partials/header.ejs') %>
+<%- include('../partials/header-partial-bg.ejs') %>
 <div class="container">
-    <h1>New Journal Entry page</h1>
 
+    <div class="partial-bg">
+        <h1>New Journal Entry page</h1>
+    </div>
+    
     <form id="journalForm" action="/journals" method="POST">
         <%- include('_form_fields') %>
     </form>
