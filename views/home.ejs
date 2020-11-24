@@ -1,6 +1,6 @@
 <%- include('partials/header.ejs') %>
+<main>
 
-<div>
   <div class="content text-center">
 
     <div class="drop-wrap container d-flex justify-content-center">
@@ -33,9 +33,10 @@
 
     <div class="container bottom-btn">
       <a href="/journals" type="button" class="btn journal-btn btn-lg btn-block">Open the journal</a>
-      <button type="button" class="btn talk-btn btn-lg btn-block">Talk to someone</button>
+      <a href="/views/healing/help.ejs" type=button" class="btn talk-btn btn-lg btn-block">Talk to someone</a>
+      <!-- !!!!!!!!!!!!!! <Make the button work (Talk to someone)> !!!!!!!!!!!!!!!!!!! -->
     </div>
   </div>
-  </main>
+</main>
 
-  <%- include('partials/footer.ejs') %>
+<%- include('partials/footer.ejs') %>

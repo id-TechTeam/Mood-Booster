@@ -1,5 +1,5 @@
 
-/* ------------------Basics start---------------------- */
+/* ------------------Basics Start---------------------- */
 
 * {
 /* border: 1px solid black; */
@@ -14,7 +14,6 @@ body {
   display: flex;
   flex-flow: column;
   justify-content: center;
-
 }
 
 h1,
@@ -26,12 +25,12 @@ h1 {
   font-weight: 900;
 }
 
-/* ------------------ Basics end ---------------------- */
+/* ------------------- Basics End ------------------------- */
 
 
 
 
-/* ------------------ Home.ejs start ---------------------- */
+/* ------------------ Home.ejs Start ---------------------- */
 
 .content {
   position: relative;
@@ -112,10 +111,9 @@ h1 {
   color: #5EA7C8;
 }
 
-/* ------------------ Home.ejs end ---------------------- */
 
-/* ------------------ Media start ---------------------- */
-/* not finished yet here */
+/* <<<<<< Media Start >>>>>>>> */
+
 @media screen and (min-width:500px) {
   .drop {
     margin: 10% auto 1% auto;
@@ -124,7 +122,6 @@ h1 {
     margin-bottom: 10%;
   }
 }
-
 
 @media screen and (min-width:768px) {
 
@@ -140,7 +137,6 @@ h1 {
     margin-bottom: 5%;
   }
 }
-
 
 @media screen and (min-width:991px) {
 
@@ -177,6 +173,34 @@ h1 {
 width: 15%;
  }
 }
+/* <<<<<< Media End >>>>>>>> */
+
+/* ------------------ Home.ejs End ---------------------- */
 
 
-/* ------------------ Media end ---------------------- */
+
+
+/* ------------------ healing_options.ejs Start ---------------------- */
+
+.long-h1 {
+  font-size: 26px;
+  line-height: 96.4%;
+}
+
+.options {
+  font-size: 25px;
+}
+
+.options-content {
+  margin-top: 55%;
+  margin-bottom: 2%;
+}
+
+/* <<<<<< Media Start >>>>>>>> */
+
+/* Need to be worked on */
+
+/* <<<<<< Media End >>>>>>>> */
+
+
+/* ------------------ healing_options.ejs End ---------------------- */

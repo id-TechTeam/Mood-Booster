@@ -4,6 +4,7 @@ body {
     background: linear-gradient(0deg, rgba(229,229,229,1) 0%, rgba(94,167,200,1) 100%);
 }
 
+/* Wrap h1 of the choosen page in a div and give it the class partial-bg*/
 .partial-bg {
     background: center/cover url(/images/clouds.jpg);
     filter: drop-shadow(0px 4px 14px rgba(0, 0, 0, 0.25));
