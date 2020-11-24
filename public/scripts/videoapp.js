@@ -16,6 +16,7 @@ const addNewCat = async () => {
     credits.innerHTML = "Photo by " + "<a href = " + author + ">" + cat.data.user.name + "</a>" + " on " + "<a href = 'https://unsplash.com/?utm_source=Cute_Cat_Pics&utm_medium=referral'>" + "Unsplash" + "</a>";
     img.setAttribute('class', "rounded");
     img.src = cat.data.urls.raw + "&fit=fill&fill=blur&w=400&h=400";
+    credits.setAttribute('class', 'mt-3');
     cats.append(img);
     cats.append(credits);
 
