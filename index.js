@@ -10,8 +10,12 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var bcrypt = require('bcrypt');
+var session = require('express-session');
+var passport = require('passport');
 var methodOverride = require('method-override');
 const journalsRouter = require('./routes/journals.js');
+const initializePassport = require("./passport-config.js");
 var Journal = require('./models/journal');
 
 
@@ -22,15 +26,34 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopol
     }
 });
 
+//Give passport two ways to find users
+initializePassport(passport,
+    //find user by username
+    (username) => {
+        return users.find((user) => user.username === username);
+    },
+    //find user by id
+    id => users.find(user => user.id === id)
+);
+
 //Allows us to render ejs files instead of html files.
 //(ejs files are pretty much the same as html files. The only difference is that they are inclusive of javascript.)
 app.set("view-engine", "ejs");
 
-//Tells our app to look inside the public directory for files, like our images.
-app.use(express.static(__dirname + '/public'));
+//express setup
+app.use(express.static(__dirname + '/public')); //Tells our app to look inside the public directory for files, like our images.
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
+app.use(
+    session({
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false,
+    })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 app.use('/journals', journalsRouter);   // Make sure this is on the bottom of app.use section
 
 //ROUTES
