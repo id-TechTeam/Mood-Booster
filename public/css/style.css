@@ -1,9 +1,9 @@
-
 /* ------------------Basics Start---------------------- */
 
 * {
-/* border: 1px solid black; */
+  /* border: 1px solid black; */
 }
+
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -13,7 +13,7 @@ body {
   position: relative;
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 h1,
@@ -44,7 +44,7 @@ h1 {
 .drop {
   width: 25%;
   fill: #ffffff;
-   margin-bottom: 5%;
+  margin-bottom: 5%;
 }
 
 h1 {
@@ -118,6 +118,7 @@ h1 {
   .drop {
     margin: 10% auto 1% auto;
   }
+
   h1 {
     margin-bottom: 10%;
   }
@@ -140,8 +141,8 @@ h1 {
 
 @media screen and (min-width:991px) {
 
-   .drop {
- width: 20%;
+  .drop {
+    width: 20%;
   }
 
   .mood-box {
@@ -158,21 +159,22 @@ h1 {
     margin: 3px auto;
   }
 
-#moods-wrap .container:nth-of-type(1) {
-  margin-top: 0;
-}
+  #moods-wrap .container:nth-of-type(1) {
+    margin-top: 0;
+  }
 
-.drop-wrap.container {
-  margin-bottom: 0;
-}
+  .drop-wrap.container {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width:1200px) {
 
   .drop {
-width: 15%;
- }
+    width: 15%;
+  }
 }
+
 /* <<<<<< Media End >>>>>>>> */
 
 /* ------------------ Home.ejs End ---------------------- */
@@ -204,3 +206,67 @@ width: 15%;
 
 
 /* ------------------ healing_options.ejs End ---------------------- */
+
+/* ------------------ about.ejs Start ---------------------- */
+
+.about-wrap {
+  position: absolute;
+  width: 90%;
+  height: 77%;
+  overflow: scroll;
+  top: 23%;
+  left: 5%;
+}
+
+.profile-wrap {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15%;
+  display: flex;
+}
+
+.profile-wrap:last-child {
+  margin-bottom: 0;
+}
+
+.member-pic {
+  width: 100%;
+}
+
+.pic-container {
+  background: center/cover url(/images/Placeholder-picture.jpg);
+  display: inline-block;
+  width: 41.87%;
+  height: 11.56em;
+  border: 1px solid white;
+  border-radius: 7px;
+}
+
+.pic-container.ksenia {
+  background: center/cover no-repeat url(/images/Ksenia.jpeg);
+}
+
+.about-txt-container {
+  display: inline-block;
+  width: 57%;
+}
+
+.about-txt-container h2 {
+  font-size: 26px;
+  padding-left: 0.6em;
+}
+
+.about-txt-container p {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px;
+  padding-left: 1.2em;
+}
+
+.about-txt-container a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ------------------ about.ejs End ---------------------- */
