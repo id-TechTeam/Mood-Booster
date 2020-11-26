@@ -1,8 +1,8 @@
 /* ------------------Basics Start---------------------- */
 
-* {
-  /* border: 1px solid black; */
-}
+/* * {
+  border: 1px solid black;
+} */
 
 
 body {
@@ -23,6 +23,10 @@ h1,
 
 h1 {
   font-weight: 900;
+}
+
+#content-wrap {
+  padding-bottom: 18%;
 }
 
 /* ------------------- Basics End ------------------------- */
@@ -270,3 +274,165 @@ h1 {
 }
 
 /* ------------------ about.ejs End ---------------------- */
+
+/* ------------------ journal/index.ejs Start ---------------------- */
+
+/* .one-btn {
+  height: 6.5em;
+} */
+
+.journal-entry {
+  list-style: none;
+  padding-left: 0;
+}
+
+.journal-wrap {
+  margin-bottom: 20%;
+}
+
+.journal-entry a {
+  font-weight: 400;
+  font-size: 23px;
+  color: #ffffff;
+}
+
+.journal-entry p {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.journal-entry li {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0 5% 0 5%;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2%;
+}
+
+/* ------------------ journal/index.ejs End ---------------------- */
+
+
+/* ------------------ journal/new.ejs/_form_fields.ejs Start ---------------------- */
+
+.form-wrap {
+  margin: 0 1.9375em 1.875em;
+}
+
+/* Labels are not active at the moment! Outcommented in .ejs file*/
+#journalForm label {
+  display: block;
+  font-size: 10px;
+  margin-bottom: 0;
+
+}
+
+#journalForm label:nth-of-type(1) {
+  padding-top: 2px;
+}
+/* Label end */
+
+.post-content,
+.post-date,
+.post-heading {
+  margin-bottom: 0;
+}
+
+.post-date {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.6em;
+  margin-top: 1.2em;
+}
+
+.post-heading input,
+.post-content textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  border-radius: 0.4375em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.13) inset;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.post-heading input {
+  height: 2.125em;
+}
+
+.post-heading input::placeholder {
+  padding-left: 0.5em;
+}
+
+.post-content textarea {
+  height: 20.125em;
+}
+
+.post-content textarea::placeholder {
+  padding-top: 2em;
+  padding-left: 0.5em;
+}
+
+
+.post-date input {
+  width: 9em;
+  font-size: 16px;
+  text-align: right;
+  color: #ffffff;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.49);
+}
+
+/* !!!!!!!!!!!!!!!!!!!!! Date selector needs to be styled !!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+
+
+/* ------------------ journal/new.ejs/_form_fields.ejs End ---------------------- */
+
+/* ------------------ help.ejs Start ---------------------- */
+
+.help-wrap {
+  position: absolute;
+  height: 38em;
+  top: 12.69em;
+  left: 1.81em;
+  overflow: scroll;
+}
+
+.help-box {
+  width: 19.81em;
+  height: 12.44em;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  margin-bottom: 0.94em;
+  border-radius: 7px;
+  padding: 1em 1em;
+}
+
+.help-box h2 {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 12.53px;
+  margin-bottom: 1em;
+}
+
+.help-box p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18.19px;
+}
+
+.help-nmbr {
+  display: block;
+  margin-top: 1.7em;
+  font-weight: 600;
+  font-size: 13px;
+  color: rgba(94, 167, 200, 1);
+}
+
+.nmbr {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+/* ------------------ help.ejs End ---------------------- */
