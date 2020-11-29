@@ -12,11 +12,14 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var bcrypt = require('bcrypt');
 var session = require('express-session');
+var flash = require('express-flash');
 var passport = require('passport');
 var methodOverride = require('method-override');
 const journalsRouter = require('./routes/journals.js');
+const userRouter = require('./routes/users.js');
 const initializePassport = require("./passport-config.js");
 var Journal = require('./models/journal');
+var User = require('./models/user');
 
 
 //Connect to database
@@ -25,6 +28,16 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopol
         console.log("mongoose error: ", err);
     }
 });
+
+var users = [];
+
+User.find({}, function (err, foundUsers) {
+    if (err) {
+        console.log("error finding users: ", err);
+    } else {
+        users = foundUsers;
+    }
+})
 
 //Give passport two ways to find users
 initializePassport(passport,
@@ -45,6 +58,7 @@ app.use(express.static(__dirname + '/public')); //Tells our app to look inside t
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
+app.use(flash());
 app.use(
     session({
         secret: process.env.SESSION_SECRET,
@@ -55,6 +69,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/journals', journalsRouter);   // Make sure this is on the bottom of app.use section
+app.use('/users', userRouter);   // Make sure this is on the bottom of app.use section
 
 //ROUTES
 
