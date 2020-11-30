@@ -1,31 +1,36 @@
 <%- include('../partials/header-partial-bg.ejs') %>
+<link rel="stylesheet" href="/css/3-block-btn.css">
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
 <div class="partial-bg">
-    <h1>Get a cuteness boost</h1>
+  <h1>Here is the boost</h1>
 </div>
 
-<div id="picture" class="container"></div>
-<div class="container">
-    <div class="col-5 mx-auto">
-        <input type="radio" id="kitten" name="selection" value="kitten" checked>
-        <label for="kitten" class="pr-2">Kitten</label>
+<div class="cute-wrap">
+  <div id="picture" class="container"></div>
+</div>
 
-        <input type="radio" id="puppies" name="selection" value="puppies">
-        <label for="puppies" class="pr-2">Puppies</label>
 
-        <input type="radio" id="nature" name="selection" value="nature">
-        <label for="nature" class="pr-2">Nature</label>
+<div class="container bottom-btn 3-btns">
+  <button type="button" id="btn" class="btn blue-btn btn-lg btn-block">One more boost</button>
 
-        <button type="button" id="btn" class="btn talk-btn">Select</button>
-        <button type="button" class="btn journal-btn btn-block">Get another Boost</button>
+  <div class="radio-wrap btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn radio kitten btn-lg">
+      <input type="radio" name="selection" id="kitten" value="kitten"> Cats
+    </label>
+    <label class="btn active radio puppies btn-lg">
+      <input type="radio" name="selection" id="puppies" value="puppies" checked> Puppies
+    </label>
+    <label class="btn radio nature btn-lg">
+      <input type="radio" name="selection" id="nature" value="nature"> Nature
+    </label>
+  </div>
 
-    </div>
+  <a href="/" type="button" class="btn transparent-btn btn-lg btn-block">Go back</a>
 
 </div>
-</div>
-</div>
+
 
 <script src="/scripts/videoapp.js"></script>
-
-
 <%- include('../partials/footer.ejs') %>
