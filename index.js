@@ -93,7 +93,7 @@ app.get('/mood/:userMood', (req, res) => {
     res.render("healing/index.ejs", { mood: mood });
 })
 
-app.get('/healing/:healing_method/:userMood', (req, res) => {
+app.get('/healing/:healing_method/:userMood?', (req, res) => {
     var mood = req.params.userMood;
     var healing_method = req.params.healing_method;
     switch (healing_method) {

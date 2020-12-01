@@ -1,0 +1,10 @@
+/* Implement this file under der header link, if you have 3 block buttons at the bottom */
+
+
+#content-wrap {
+    padding-bottom: 0.75em;
+}
+
+.btn {
+    margin-bottom: 0.3em;
+}

@@ -1,13 +1,31 @@
-<%- include('../partials/header.ejs') %>
+<%- include('../partials/header-partial-bg.ejs') %>
+<link rel="stylesheet" href="/css/3-block-btn.css">
 
-<div class="container">
-    <h1 class="mb-1"><%= journal.heading %></h1>
-    <p class="mb-1"><%= journal.content %></p>
-    <a href="/journals" class="btn btn-secondary">See all Journal Entries</a>
-    <a href="/journals/edit/<%= journal._id %>" class="btn btn-info">Edit</a>
+<div class="partial-bg">
+    <h1>Journal Post</h1>
+</div>
+
+
+<div class="show-wrap">
+    <div class="show-heading">
+        <h2><%= journal.heading %></h2>
+    </div>
+    <!--!!!!!! IT WORKS NOW !!!!!!!  XD -->
+    <div class="show-date">
+        <p><%= journal.createdAt.toLocaleDateString() %></p>
+    </div>
+    <div class="show-content">
+        <p><%= journal.content %></p>
+    </div>
+
+</div>
+
+<div class="container bottom-btn 3-btns">
+    <a href="/journals/edit/<%= journal._id %>" type="button" class="btn blue-btn btn-lg btn-block">Edit</a>
     <form action="/journals/<%= journal._id %>?_method=DELETE" method="POST" class="d-inline">
-        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="submit" class="btn transparent-btn btn-lg btn-block">Delete</button>
     </form>
+    <a href="/journals" type="button" class="btn transparent-btn btn-lg btn-block">Go back</a>
 </div>
 
 
