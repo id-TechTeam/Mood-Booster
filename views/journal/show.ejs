@@ -10,9 +10,9 @@
     <div class="show-heading">
         <h2><%= journal.heading %></h2>
     </div>
-    <!--!!!!!!!!!!!!!!!!!!!!!! Make it work!!!!!!!!!!!!!!!!!!!!!! -->
+    <!--!!!!!! IT WORKS NOW !!!!!!!  XD -->
     <div class="show-date">
-        <p>Yournal date</p>
+        <p><%= journal.createdAt.toLocaleDateString() %></p>
     </div>
     <div class="show-content">
         <p><%= journal.content %></p>
