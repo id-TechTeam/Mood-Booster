@@ -15,6 +15,7 @@ var session = require('express-session');
 var flash = require('express-flash');
 var passport = require('passport');
 var methodOverride = require('method-override');
+var passReq = require('./public/serverjs/password_requirements');
 const journalsRouter = require('./routes/journals.js');
 const userRouter = require('./routes/users.js');
 const initializePassport = require("./passport-config.js");
