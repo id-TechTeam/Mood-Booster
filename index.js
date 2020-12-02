@@ -17,8 +17,7 @@ var passport = require('passport');
 var methodOverride = require('method-override');
 var passReq = require('./public/serverjs/password_requirements');
 const journalsRouter = require('./routes/journals.js');
-const userRouter = require('./routes/users.js');
-const initializePassport = require("./passport-config.js");
+const initializePassport = require("./public/serverjs/passport-config.js");
 var Journal = require('./models/journal');
 var User = require('./models/user');
 
