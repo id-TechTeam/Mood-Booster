@@ -74,7 +74,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use('/journals', journalsRouter);   // Make sure this is on the bottom of app.use section
-app.use('/users', userRouter);   // Make sure this is on the bottom of app.use section
 
 //ROUTES
 
@@ -123,9 +122,86 @@ app.get('/healing/:healing_method/:userMood?', (req, res) => {
         default:
             console.log("unrecognized healing method: " + healing_method);
             res.render('home.ejs');
+app.get("/users/login", checkNotAuthenticated, (req, res) => {
+    var user = new User();
+    user.isSignedIn = false;
+    res.render("user/login.ejs", { user: user });
+});
+
+
+app.get("/users/register", checkNotAuthenticated, (req, res) => {
+    var user = new User();
+    user.isSignedIn = false;
+    res.render("user/register.ejs", { user: user });
+});
+
+app.post(
+    "/users/login", checkNotAuthenticated,
+    passport.authenticate("local", {
+        successRedirect: "/journals",
+        failureRedirect: "/users/login",
+        failureFlash: true,
+    })
+);
+
+
+// bcrypt.hash() is an async function, so the callback needs to be async. We also need to await for the password to hash before we save it.
+app.post("/users/register", checkNotAuthenticated, async (req, res) => {
+    // 10 is generally a fast, but also safe setting for hashing a password using bcrypt
+
+
+    try {
+        passReq.meetsMinReq(req.body.password);
+        passReq.meetsMaxReq(req.body.password);
+        passReq.hasUpperCase(req.body.password);
+        passReq.hasLowerCase(req.body.password);
+        passReq.hasNumber(req.body.password);
+        passReq.notContainUsername(req.body.password, req.body.username);
+        passReq.notDescendOrAscend(req.body.password);
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        var newUser = {
+            id: Date.now().toString(),
+            username: req.body.username,
+            password: hashedPassword,
+        };
+        User.create(newUser, function (err, createdUser) {
+            if (err) {
+                console.log(err);
+            } else {
+                fetchUsers();
+                res.redirect('/users/login');
+            }
+        })
+    } catch (e) {
+        var user = new User();
+        user.isSignedIn = false;
+        res.render("user/register.ejs", { messages: { error: e }, user: user });
     }
+});
+
+
+app.delete("/users/logout", checkAuthenticated, (req, res) => {
+    req.logout();
+    res.redirect("/");
 })
 
+
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    } else {
+        res.redirect("/users/login");
+    }
+}
+
+
+function checkNotAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        res.redirect("/journals");
+    } else {
+        return next();
+    }
+}
 
 
 //Server starts here with a port of 3000
