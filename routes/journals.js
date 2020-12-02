@@ -83,6 +83,13 @@ function saveJournalAndRedirect(path) {
         journal.content = req.body.content;
         journal.heading = req.body.heading;
         journal.owner = req.user;
+        // remove the zero from the day if there is one. Otherwise, it sets the date back one day. Not really sure why.
+        var dateStr = (req.body.createdAt).toString();
+        var day = dateStr.slice(-2);
+        day = (parseInt(day)).toString();
+        dateStr = dateStr.slice(0, 8);
+        dateStr += day;
+        journal.createdAt = (new Date(parseInt(req.body.createdAt).toString())).valueOf();
         try {
             journal = await journal.save();
             res.redirect(`/journals/${journal._id}`)
