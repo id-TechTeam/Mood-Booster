@@ -78,50 +78,94 @@ app.use('/journals', journalsRouter);   // Make sure this is on the bottom of ap
 //ROUTES
 
 //root route
-app.get('/', (req, res) => {
-    res.render("home.ejs");
+app.get('/', async (req, res) => {
+    if (req.isAuthenticated()) {
+        var user = await User.findById(req.user._id);
+        delete user.password;
+        user.isSignedIn = true;
+    } else {
+        var user = new User();
+        user.isSignedIn = false;
+    }
+    res.render("home.ejs", { user: user });
 })
 
 //contact route
-app.get('/contact', (req, res) => {
-    res.render("contact.ejs");
+app.get('/contact', async (req, res) => {
+    if (req.isAuthenticated()) {
+        var user = await User.findById(req.user._id);
+        delete user.password;
+        user.isSignedIn = true;
+    } else {
+        var user = new User();
+        user.isSignedIn = false;
+    }
+    res.render("contact.ejs", { user: user });
 })
 
 //about route
-app.get('/about', (req, res) => {
-    res.render("about.ejs");
+app.get('/about', async (req, res) => {
+    if (req.isAuthenticated()) {
+        var user = await User.findById(req.user._id);
+        delete user.password;
+        user.isSignedIn = true;
+    } else {
+        var user = new User();
+        user.isSignedIn = false;
+    }
+    res.render("about.ejs", { user: user });
 })
 
-app.get('/mood/:userMood', (req, res) => {
+app.get('/mood/:userMood', async (req, res) => {
+    if (req.isAuthenticated()) {
+        var user = await User.findById(req.user._id);
+        delete user.password;
+        user.isSignedIn = true;
+    } else {
+        var user = new User();
+        user.isSignedIn = false;
+    }
     var mood = req.params.userMood;
-    res.render("healing/index.ejs", { mood: mood });
+    res.render("healing/index.ejs", { mood: mood, user: user });
 })
 
-app.get('/healing/:healing_method/:userMood?', (req, res) => {
+app.get('/healing/:healing_method/:userMood?', async (req, res) => {
+    if (req.isAuthenticated()) {
+        var user = await User.findById(req.user._id);
+        delete user.password;
+        user.isSignedIn = true;
+    } else {
+        var user = new User();
+        user.isSignedIn = false;
+    }
     var mood = req.params.userMood;
     var healing_method = req.params.healing_method;
     switch (healing_method) {
         case "music":
-            res.render('healing/music.ejs', { mood: mood, healing_method: healing_method });
+            res.render('healing/music.ejs', { mood: mood, healing_method: healing_method, user: user });
             break;
         case "video":
-            res.render('healing/video.ejs', { mood: mood, healing_method: healing_method });
+            res.render('healing/video.ejs', { mood: mood, healing_method: healing_method, user: user });
             break;
         case "help":
-            res.render('healing/help.ejs', { mood: mood, healing_method: healing_method });
+            res.render('healing/help.ejs', { mood: mood, healing_method: healing_method, user: user });
             break;
         case "workout":
-            res.render('healing/workout.ejs', { mood: mood, healing_method: healing_method });
+            res.render('healing/workout.ejs', { mood: mood, healing_method: healing_method, user: user });
             break;
         case "funny":
-            res.render('healing/funny.ejs', { mood: mood, healing_method: healing_method });
+            res.render('healing/funny.ejs', { mood: mood, healing_method: healing_method, user: user });
             break;
         case "quote":
-            res.render('healing/quote.ejs', { mood: mood, healing_method: healing_method });
+            res.render('healing/quote.ejs', { mood: mood, healing_method: healing_method, user: user });
             break;
         default:
             console.log("unrecognized healing method: " + healing_method);
-            res.render('home.ejs');
+            res.render('home.ejs', { user: user });
+    }
+})
+
+
 app.get("/users/login", checkNotAuthenticated, (req, res) => {
     var user = new User();
     user.isSignedIn = false;
