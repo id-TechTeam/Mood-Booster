@@ -1,6 +1,6 @@
 <div class="form-group post-heading">
     <input required type="text" name="heading" value="<%= journal.heading %>" placeholder="Give me a heading!">
-    <!-- <label for="heading">Your headline</label> !!!!! not sure jet! -->
+    <label for="heading" class="hide-element">Your headline</label>
 </div>
 
 <div class="form-group post-date">
@@ -13,7 +13,7 @@
     <!-- <input required type="text" name="content" value=""> -->
     <textarea required name="content" form="journalForm"
         placeholder="Fill me up! For example: 3 things you are thankful for today and 2 things you wanna make better tomorrow!"><%= journal.content %></textarea>
-    <!-- <label for="content">Your text</label> !!!!! not sure jet! -->
+    <label for="content" class="hide-element">Your text</label>
 </div>
 
 </div>
