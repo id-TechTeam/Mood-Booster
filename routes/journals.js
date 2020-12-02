@@ -1,4 +1,5 @@
 const express = require("express");
+const User = require("../models/user.js");
 const Journal = require("./../models/journal.js");
 const router = express.Router();    //this allows us to create and manage routes without running a whole seperate server. Basically, express.Router() allows us to extend from our app.
 
