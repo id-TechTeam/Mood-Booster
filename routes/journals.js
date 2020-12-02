@@ -82,6 +82,7 @@ function saveJournalAndRedirect(path) {
         let journal = req.journal;
         journal.content = req.body.content;
         journal.heading = req.body.heading;
+        journal.owner = req.user;
         try {
             journal = await journal.save();
             res.redirect(`/journals/${journal._id}`)
