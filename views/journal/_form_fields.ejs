@@ -5,18 +5,20 @@
 
 <div class="form-group post-date">
     <!-- Date needs a correct backend destination -->
-    <input required type="date" name="date" value="2020-01-01">
+    <input required type="date" name="createdAt"
+        value="<%= new Date(journal.createdAt).getFullYear() %>-<%= ("0" + (new Date(journal.createdAt).getMonth()+1)).slice(-2) %>-<%= ("0" + (new Date(journal.createdAt).getDay()-1)).slice(-2) %>">
 </div>
 
 <div class="form-group post-content">
     <!-- <input required type="text" name="content" value=""> -->
-    <textarea required name="content" form="journalForm" placeholder="Fill me up! For example: 3 things you are thankful for today and 2 things you wanna make better tomorrow!" ><%= journal.content %></textarea>
+    <textarea required name="content" form="journalForm"
+        placeholder="Fill me up! For example: 3 things you are thankful for today and 2 things you wanna make better tomorrow!"><%= journal.content %></textarea>
     <!-- <label for="content">Your text</label> !!!!! not sure jet! -->
 </div>
 
 </div>
 
 <div class="container bottom-btn">
-    <a href="/journals" type="submit" class="btn blue-btn btn-lg btn-block">Save</a>
+    <button type="submit" class="btn blue-btn btn-lg btn-block">Save</button>
     <a href="/" class="btn transparent-btn btn-lg btn-block">Cancel</a>
 </div>
