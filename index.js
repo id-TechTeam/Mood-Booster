@@ -31,13 +31,18 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopol
 
 var users = [];
 
-User.find({}, function (err, foundUsers) {
-    if (err) {
-        console.log("error finding users: ", err);
-    } else {
-        users = foundUsers;
-    }
-})
+function fetchUsers() {
+    User.find({}, function (err, foundUsers) {
+        if (err) {
+            console.log("error finding users: ", err);
+        } else {
+            users = foundUsers;
+        }
+    })
+};
+
+fetchUsers();
+
 
 //Give passport two ways to find users
 initializePassport(passport,
