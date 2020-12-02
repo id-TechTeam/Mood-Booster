@@ -35,9 +35,13 @@
                         <div id="myLinks">
                             <a href="/contact">Contact</a>
                             <a href="/about">About</a>
+                            <% if(user.isSignedIn) { %>
                             <form action="/users/logout?_method=DELETE" method="POST">
-                                <button>Logout</button>
+                                <button class="btn">Logout</button>
                             </form>
+                            <% } else { %>
+                            <a href="/users/login" class="btn">Login</a>
+                            <% } %>
                         </div>
                         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                             <i class="fa fa-bars"></i>
