@@ -1,129 +1,57 @@
-<link rel="shortcut icon" href="/assets/favicon.ico">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="/css/nav-style.css">
-
-</head>
-
-<body class="preload">
-    <header class="nav_header">
-        <button class="header__button" id="btnNav" type="button">
-            <i class="material-icons">menu</i>
-        </button>
-    </header>
-    <nav class="nav">
-        <div class="nav__links">
-            <div class="nav__top">
-                <a href="#" class="nav__link">Home</a>
-                <a href="#" class="nav__link dropdown-btn" id="angry">Angry<i
-                        class="material-icons">keyboard_arrow_down</i></a>
-                <div class="dropdown__container nav-links" id="angry_dropdown">
-                    <a href="#" class="nav__link">Cute boost</a>
-                    <a href="#" class="nav__link">Musical boost</a>
-                    <a href="#" class="nav__link">Wise boost</a>
-                    <a href="#" class="nav__link">Funny boost</a>
-                </div>
-                <a href="#" class="nav__link dropdown-btn" id="anxious">Anxious<i
-                        class="material-icons">keyboard_arrow_down</i></a>
-                <div class="dropdown__container nav-links" id="anxious_dropdown">
-                    <a href="#" class="nav__link">Cute boost</a>
-                    <a href="#" class="nav__link">Musical boost</a>
-                    <a href="#" class="nav__link">Wise boost</a>
-                    <a href="#" class="nav__link">Funny boost</a>
-                </div>
-                <a href="#" class="nav__link dropdown-btn" id="lonely">Lonely<i
-                        class="material-icons">keyboard_arrow_down</i></a>
-                <div class="dropdown__container nav-links" id="lonely_dropdown">
-                    <a href="#" class="nav__link">Cute boost</a>
-                    <a href="#" class="nav__link">Musical boost</a>
-                    <a href="#" class="nav__link">Wise boost</a>
-                    <a href="#" class="nav__link">Funny boost</a>
-                </div>
-                <a href="#" class="nav__link dropdown-btn" id="sad">Sad<i
-                        class="material-icons">keyboard_arrow_down</i></a>
-                <div class="dropdown__container nav-links" id="sad_dropdown">
-                    <a href="#" class="nav__link">Cute boost</a>
-                    <a href="#" class="nav__link">Musical boost</a>
-                    <a href="#" class="nav__link">Wise boost</a>
-                    <a href="#" class="nav__link">Funny boost</a>
-                </div>
-                <a href="#" class="nav__link">Journal</a>
-                <a href="#" class="nav__link nav__alone">Talk to someone</a>
+<header class="nav_header">
+    <button class="header__button" id="btnNav" type="button">
+        <i class="material-icons">menu</i>
+    </button>
+</header>
+<nav class="nav">
+    <div class="nav__links">
+        <div class="nav__top">
+            <a href="/" class="nav__link">Home</a>
+            <a href="#" class="nav__link dropdown-btn" id="angry">Angry<i
+                    class="material-icons">keyboard_arrow_down</i></a>
+            <div class="dropdown__container nav-links" id="angry_dropdown">
+                <a href="/healing/video/angry" class="nav__link">Cute boost</a>
+                <a href="/healing/music/angry" class="nav__link">Musical boost</a>
+                <a href="/healing/quote/angry" class="nav__link">Wise boost</a>
+                <a href="/healing/funny/angry" class="nav__link">Funny boost</a>
             </div>
-            <div class="nav__bottom">
-                <% if(user.isSignedIn) { %>
-                <form action="/users/logout?_method=DELETE" method="POST">
-                    <button class="btn">Logout</button>
-                </form>
-                <% } else { %>
-                <a href="/users/login" class="btn">Login</a>
-                <% } %>
-                <a href="#" class="nav__link">Settings</a>
-                <a href="#" class="nav__link ">About Us</a>
+            <a href="#" class="nav__link dropdown-btn" id="anxious">Anxious<i
+                    class="material-icons">keyboard_arrow_down</i></a>
+            <div class="dropdown__container nav-links" id="anxious_dropdown">
+                <a href="/healing/video/anxious" class="nav__link">Cute boost</a>
+                <a href="/healing/music/anxious" class="nav__link">Musical boost</a>
+                <a href="/healing/quote/anxious" class="nav__link">Wise boost</a>
+                <a href="/healing/funny/anxious" class="nav__link">Funny boost</a>
             </div>
+            <a href="#" class="nav__link dropdown-btn" id="lonely">Lonely<i
+                    class="material-icons">keyboard_arrow_down</i></a>
+            <div class="dropdown__container nav-links" id="lonely_dropdown">
+                <a href="/healing/video/lonely" class="nav__link">Cute boost</a>
+                <a href="/healing/music/lonely" class="nav__link">Musical boost</a>
+                <a href="/healing/quote/lonely" class="nav__link">Wise boost</a>
+                <a href="/healing/funny/lonely" class="nav__link">Funny boost</a>
+            </div>
+            <a href="#" class="nav__link dropdown-btn" id="sad">Sad<i class="material-icons">keyboard_arrow_down</i></a>
+            <div class="dropdown__container nav-links" id="sad_dropdown">
+                <a href="/healing/video/sad" class="nav__link">Cute boost</a>
+                <a href="/healing/music/sad" class="nav__link">Musical boost</a>
+                <a href="/healing/quote/sad" class="nav__link">Wise boost</a>
+                <a href="/healing/funny/sad" class="nav__link">Funny boost</a>
+            </div>
+            <a href="/journals" class="nav__link">Journal</a>
+            <a href="/healing/help" class="nav__link nav__alone">Talk to someone</a>
         </div>
-        <div class="nav__overlay"></div>
-    </nav>
-    <script>
-        // move the sidebar in and out
-        window.addEventListener("load", () => {
-            document.body.classList.remove("preload");
-        });
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const nav = document.querySelector(".nav");
-
-            document.querySelector("#btnNav").addEventListener("click", () => {
-                nav.classList.add("nav--open");
-            });
-            document.querySelector(".nav__overlay").addEventListener("click", () => {
-                nav.classList.remove("nav--open");
-            });
-        });
-        // toggle dropdowns open and close so that only one can be opened at a time
-        const angry = document.getElementById("angry");
-        const anxious = document.getElementById("anxious");
-        const lonely = document.getElementById("lonely");
-        const sad = document.getElementById("sad");
-
-        angry.addEventListener('click', function () {
-            document.getElementById("angry_dropdown").classList.toggle("show");
-            document.getElementById("anxious_dropdown").classList.remove("show");
-            document.getElementById("lonely_dropdown").classList.remove("show");
-            document.getElementById("sad_dropdown").classList.remove("show");
-        })
-
-        anxious.addEventListener('click', function () {
-            document.getElementById("angry_dropdown").classList.remove("show");
-            document.getElementById("anxious_dropdown").classList.toggle("show");
-            document.getElementById("lonely_dropdown").classList.remove("show");
-            document.getElementById("sad_dropdown").classList.remove("show");
-        })
-
-        lonely.addEventListener('click', function () {
-            document.getElementById("angry_dropdown").classList.remove("show");
-            document.getElementById("anxious_dropdown").classList.remove("show");
-            document.getElementById("lonely_dropdown").classList.toggle("show");
-            document.getElementById("sad_dropdown").classList.remove("show");
-        })
-
-        sad.addEventListener('click', function () {
-            document.getElementById("angry_dropdown").classList.remove("show");
-            document.getElementById("anxious_dropdown").classList.remove("show");
-            document.getElementById("lonely_dropdown").classList.remove("show");
-            document.getElementById("sad_dropdown").classList.toggle("show");
-        })
-        // Close all the dropdowns if the user clicks outside of them
-        window.onclick = function (e) {
-            if (!e.target.matches('.dropdown-btn')) {
-                var myDropdown = document.getElementsByClassName("dropdown__container");
-                var i;
-
-                for (i = 0; i < myDropdown.length; i++) {
-                    if (myDropdown[i].classList.contains('show')) {
-                        myDropdown[i].classList.remove('show');
-                    }
-                }
-            }
-        }
-
-    </script>
+        <div class="nav__bottom">
+            <% if(user.isSignedIn) { %>
+            <form action="/users/logout?_method=DELETE" method="POST">
+                <button class="btn">Logout</button>
+            </form>
+            <% } else { %>
+            <a href="/users/login" class="btn">Login</a>
+            <% } %>
+            <a href="#" class="nav__link">Settings</a>
+            <a href="/about" class="nav__link ">About Us</a>
+        </div>
+    </div>
+    <div class="nav__overlay"></div>
+</nav>

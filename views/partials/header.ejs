@@ -14,36 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="shortcut icon" href="/assets/favicon.ico"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/nav-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
 <body>
     <div id="content-wrap">
         <!-- Following is hidden main nav section - SW -->
         <div id="header-wrap">
-            <header>
-                <nav>
-                    <div class="topnav">
-                        <a href="/" class="active">Logo
-                            <!-- Goes here -SW --> </a>
-                        <div id="myLinks">
-                            <a href="/contact">Contact</a>
-                            <a href="/about">About</a>
-                            <% if(user.isSignedIn) { %>
-                            <form action="/users/logout?_method=DELETE" method="POST">
-                                <button class="btn">Logout</button>
-                            </form>
-                            <% } else { %>
-                            <a href="/users/login" class="btn">Login</a>
-                            <% } %>
-                        </div>
-                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                            <i class="fa fa-bars"></i>
-                        </a>
-                    </div>
-                </nav>
-                <%- include('navbar.ejs') %>
-            </header>
+            <%- include('navbar.ejs') %>
         </div>

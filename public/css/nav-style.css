@@ -2,13 +2,13 @@ body {
     --header-height: 50px;
 
     margin: var(--header-height) 0 0 0;
-    font-family: sans-serif;
+
 }
 
 /* to avoid clitch in the beginning when the page loads */
-.preload * {
+/* .preload * {
     transition: none !important;
-}
+} */
 
 .nav_header {
     position: fixed;
