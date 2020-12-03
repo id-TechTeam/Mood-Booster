@@ -50,7 +50,13 @@
                 <a href="#" class="nav__link nav__alone">Talk to someone</a>
             </div>
             <div class="nav__bottom">
-                <a href="#" class="nav__link">Sign Up</a>
+                <% if(user.isSignedIn) { %>
+                <form action="/users/logout?_method=DELETE" method="POST">
+                    <button class="btn">Logout</button>
+                </form>
+                <% } else { %>
+                <a href="/users/login" class="btn">Login</a>
+                <% } %>
                 <a href="#" class="nav__link">Settings</a>
                 <a href="#" class="nav__link ">About Us</a>
             </div>
@@ -121,6 +127,3 @@
         }
 
     </script>
-</body>
-
-</html>
