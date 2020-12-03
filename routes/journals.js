@@ -1,31 +1,41 @@
 const express = require("express");
+const User = require("../models/user.js");
 const Journal = require("./../models/journal.js");
 const router = express.Router();    //this allows us to create and manage routes without running a whole seperate server. Basically, express.Router() allows us to extend from our app.
 
 //journal index
-router.get('/', async (req, res) => {
-    const journals = await Journal.find({});
-    res.render('journal/index.ejs', { journals: journals });
+router.get('/', checkAuthenticated, async (req, res) => {
+    const journals = await Journal.find({ owner: req.user._id });
+    var user = req.user;
+    user.isSignedIn = true;
+    delete user.password;
+    res.render('journal/index.ejs', { journals: journals, user: user });
 })
 
 //new journal
-router.get('/new', (req, res) => {
-    res.render('journal/new.ejs', { journal: new Journal() });
+router.get('/new', checkAuthenticated, (req, res) => {
+    var user = req.user;
+    user.isSignedIn = true;
+    delete user.password;
+    res.render('journal/new.ejs', { journal: new Journal(), user: user });
 })
 
 //create journal
-router.post('/', async (req, res, next) => {
+router.post('/', checkAuthenticated, async (req, res, next) => {
     req.journal = new Journal();
     next();
 }, saveJournalAndRedirect('new.ejs'))
 
 
 //edit journal
-router.get("/edit/:id", async (req, res) => {
+router.get("/edit/:id", checkAuthenticated, async (req, res) => {
     if (req.params.id.length === 24) {
         try {
+            var user = req.user;
+            user.isSignedIn = true;
+            delete user.password;
             const journal = await Journal.findById(req.params.id);
-            res.render('journal/edit.ejs', { journal: journal });
+            res.render('journal/edit.ejs', { journal: journal, user: user });
         } catch (err) {
             console.log(err);
             res.redirect("/");
@@ -36,12 +46,15 @@ router.get("/edit/:id", async (req, res) => {
 })
 
 //show journal for reading
-router.get("/:id", async (req, res) => {
+router.get("/:id", checkAuthenticated, async (req, res) => {
     if (req.params.id.length === 24) {
         try {
+            var user = req.user;
+            user.isSignedIn = true;
+            delete user.password;
             const journal = await Journal.findById(req.params.id);
             if (journal == null) res.redirect('/');
-            res.render("journal/show.ejs", { journal: journal })
+            res.render("journal/show.ejs", { journal: journal, user: user })
         } catch (err) {
             console.log(err);
             res.redirect('/');
@@ -52,13 +65,13 @@ router.get("/:id", async (req, res) => {
 })
 
 //update journal
-router.put('/:id', async (req, res, next) => {
+router.put('/:id', checkAuthenticated, async (req, res, next) => {
     req.journal = await Journal.findById(req.params.id)
     next();
 }, saveJournalAndRedirect('edit.ejs'))
 
 //delete journal
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', checkAuthenticated, async (req, res) => {
     await Journal.findByIdAndDelete(req.params.id);
     res.redirect("/journals");
 })
@@ -69,13 +82,41 @@ function saveJournalAndRedirect(path) {
         let journal = req.journal;
         journal.content = req.body.content;
         journal.heading = req.body.heading;
+        journal.owner = req.user;
+        // remove the zero from the day if there is one. Otherwise, it sets the date back one day. Not really sure why.
+        var dateStr = (req.body.createdAt).toString();
+        var day = dateStr.slice(-2);
+        day = (parseInt(day)).toString();
+        dateStr = dateStr.slice(0, 8);
+        dateStr += day;
+        journal.createdAt = (new Date(parseInt(req.body.createdAt).toString())).valueOf();
         try {
             journal = await journal.save();
             res.redirect(`/journals/${journal._id}`)
         } catch (err) {
+            var user = req.user;
+            user.isSignedIn = true;
+            delete user.password;
             console.log(err);
-            res.render(`journal/${path}`, { journal: journal })
+            res.render(`journal/${path}`, { journal: journal, user: user })
         }
+    }
+}
+
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    } else {
+        res.redirect("/users/login");
+    }
+}
+
+
+function checkNotAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        res.redirect("/journals");
+    } else {
+        return next();
     }
 }
 
