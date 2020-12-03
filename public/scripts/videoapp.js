@@ -24,21 +24,11 @@ const addNewPicture = async () => {
 }
 
 //async function to fetch the cat from the Unsplash API - needs sign up but is free up to 50 calls per hour.Can be customized more for size and query
-const getPicture = async () => {
-    try {
-        const selected = getSelected();
-        const config = {
-            headers: {
-                'Accept-Version': 'v1',
-                Authorization: PIC_API_KEY
-            }
-        }
-        const res = await axios.get('https://api.unsplash.com/photos/random?query=' + selected, config)
-        return res;
-    } catch (e) {
-        return "NO CATS AVAILABLE! SORRY :("
-    }
-
+function getPicture() {
+    return new Promise(async resolve => {
+        var result = await axios.get("/getPicture/" + getSelected())
+        resolve(axios.get("/getPicture/" + getSelected()));
+    });
 }
 
 // function to handle selection of different type of picture
