@@ -8,24 +8,26 @@
 
 <div class="music-wrap">
     <!-- selector for playlist based on mood -->
+    <% const quoteNumber = Math.floor(Math.random() * 10) %>
+
     <% if (mood === "sad") { %>
-    <iframe class="music-video"
-        src="https://www.youtube.com/embed/videoseries?list=PLAQ7nLSEnhWTEihjeM1I-ToPDJEKfZHZu" frameborder="0"
+    <% const sadSongs = ['JGwWNGJdvx8', 'OPf0YbXqDm0', '09R8_2nJtjg', 'hT_nvWreIhg', 'nfWlot6h_JM', '60ItHLz5WEA', '2Vv-BfVoq4g', '7PCkvCPvDXk', 'kffacxfA7G4', 'fLexgOxsZu0'] %>
+    <iframe class="music-video" src="https://www.youtube.com/embed/<%= sadSongs[quoteNumber] %>" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     <% } else if (mood === "anxious"){ %>
-    <iframe class="music-video"
-        src="https://www.youtube.com/embed/videoseries?list=PLo3pNg0eiPc9hsnjWTTM4PVTKrmGaXOQ1" frameborder="0"
+    <% const anxiousSongs = ['7wfYIMyS_dI', 'Rk_sAHh9s08', 'Nf-4IKkpobY', 'LTrk4X9ACtw', '5i6A1IHAQsg', 'CvFH_6DNRCY', 'XRjFkbNt1rg', 'u4ovM_5lLOI','HjK30nhy7CU', 'Zw_y3Kj_Sa8'] %>
+    <iframe class="music-video" src="https://www.youtube.com/embed/<%= anxiousSongs[quoteNumber] %>" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     <% } else if (mood === "angry"){ %>
-    <iframe class="music-video"
-        src="https://www.youtube.com/embed/videoseries?list=PL7v1FHGMOadBhCjuh_ljEEhqrQKCBsoIn" frameborder="0"
+    <% const angrySongs = ['uelHwf8o7_U', '0KSOMA3QBU0', '8UVNT4wvIGY', 'pKtUpBjIl-g', '_Yhyp-_hX2s', 'fKopy74weus', 'AG-erEMhumc', 'qN4ooNx77u0', 'lY2yjAdbvdQ', 'rYEDA3JcQqw'] %>
+    <iframe class="music-video" src="https://www.youtube.com/embed/<%= angrySongs[quoteNumber] %>" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     <% } else if (mood === "lonely"){ %>
-    <iframe class="music-video"
-        src="https://www.youtube.com/embed/videoseries?list=PLgP_WFDJWjxRBAnIeUupZ-XHAspFBJZ0i" frameborder="0"
+    <% const lonelySongs = ['RgKAFK5djSk', 'xQOO2xGQ1Pc', 'M7rMbPIAg5k', '8jn4TxnI7AQ', 'RBumgq5yVrA', 'CveANi17YfU', 'zABLecsR5UE', 'BjhW3vBA1QU', 'YQHsXMglC9A', 'rhcc1KQlCS4'] %>
+    <iframe class="music-video" src="https://www.youtube.com/embed/<%= lonelySongs[quoteNumber] %>" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     <% } else  { %>
@@ -38,6 +40,5 @@
     <a href="" type="button" class="btn blue-btn btn-lg btn-block">One more boost</a>
     <a href="/" type=button" class="btn transparent-btn btn-lg btn-block">Go back</a>
 </div>
-
 
 <%- include('../partials/footer.ejs') %>
