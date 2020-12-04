@@ -44,10 +44,10 @@
         <div class="nav__bottom">
             <% if(user.isSignedIn) { %>
             <form action="/users/logout?_method=DELETE" method="POST">
-                <button class="btn">Logout</button>
+                <button class="btn nav__link">Logout</button>
             </form>
             <% } else { %>
-            <a href="/users/login" class="btn">Login</a>
+            <a href="/users/login" class="btn nav__link">Login</a>
             <% } %>
             <a href="#" class="nav__link">Settings</a>
             <a href="/about" class="nav__link ">About Us</a>
