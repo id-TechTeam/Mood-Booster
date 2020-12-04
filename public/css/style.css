@@ -284,25 +284,16 @@ h1 {
 /* ------------------ journal/index.ejs End ---------------------- */
 
 
-/* ------------------ journal/new.ejs/_form_fields.ejs Start ---------------------- */
+/* ------------------ journal/new.ejs/_form_fields.ejs/edit.ejs Start ---------------------- */
+
+.form-wrap.edit {
+  font-family: 'lato', sans-serif;
+  font-weight: 400;
+}
 
 .form-wrap {
   margin: 0 1.9375em 1.875em;
 }
-
-/* Labels are not active at the moment! Outcommented in .ejs file*/
-#journalForm label {
-  display: block;
-  font-size: 10px;
-  margin-bottom: 0;
-
-}
-
-#journalForm label:nth-of-type(1) {
-  padding-top: 2px;
-}
-
-/* Label end */
 
 .post-content,
 .post-date,
@@ -379,7 +370,6 @@ h1 {
   font-size: 27px;
   line-height: 40px;
   height: 100%;
-  overflow: scroll;
 }
 
 
@@ -405,7 +395,7 @@ h1 {
   font-weight: 400;
   font-size: 14px;
   line-height: 186%;
-  overflow: scroll;
+ 
 }
 
 /* ------------------ journal/show.ejs End ---------------------- */
