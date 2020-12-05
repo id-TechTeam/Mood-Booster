@@ -211,6 +211,10 @@ h1 {
   background: center/cover no-repeat url(/images/mayabuserde.png);
 }
 
+.pic-container.luis {
+  background: center/cover no-repeat url(/images/luis.jpg);
+}
+
 .about-txt-container {
   width: 57%;
 }
@@ -289,11 +293,11 @@ h1 {
 }
 
 .journal-preview-text {
-  color: white; 
-  text-overflow: ellipsis; 
-  overflow: hidden; 
-  white-space: nowrap; 
-  line-height: 16px; 
+  color: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 16px;
 }
 
 /* ------------------ journal/index.ejs End ---------------------- */
@@ -963,13 +967,13 @@ h1 {
 
 @media screen and (min-height: 900px) {
 
-.about-wrap {
-  height: 46em;
-}
+  .about-wrap {
+    height: 46em;
+  }
 
-.journal-wrap {
-  height: 32.1;
-}
+  .journal-wrap {
+    height: 32.1;
+  }
 
   /* @@@@@@@@!- Music.ejs / (cute)video.ejs Start -!@@@@@@@@ */
   .music-wrap,
@@ -986,14 +990,15 @@ h1 {
 
   /* @@@@@@@@!- Funny/Quote End -!@@@@@@@@ */
 
-   /* @@@@@@@@!- Home/Options Start -!@@@@@@@@ */
-   #content-wrap {
-     margin-bottom: 6em;
-   }
-   /* @@@@@@@@!- Home/Options End -!@@@@@@@@ */
-   }
- 
-   
+  /* @@@@@@@@!- Home/Options Start -!@@@@@@@@ */
+  #content-wrap {
+    margin-bottom: 6em;
+  }
+
+  /* @@@@@@@@!- Home/Options End -!@@@@@@@@ */
+}
+
+
 
 
 
@@ -1020,13 +1025,19 @@ h1 {
 }
 
 @media screen and (min-height: 1000px) {
-.help-wrap, .about-wrap{
-  height: 53em;
-  margin-top: 9em;}
-
+ /* @@@@@@@@!- Help/About Start -!@@@@@@@@ */
+  .help-wrap,
+  .about-wrap {
+    height: 53em;
+    margin-top: 9em;
+  }
+ /* @@@@@@@@!- Help/About End -!@@@@@@@@ */
+  /* @@@@@@@@!- Journal Start -!@@@@@@@@ */
   .journal-wrap {
-  height: 39.2em;
-}
+    height: 39.2em;
+  }
+
+  /* @@@@@@@@!- Journal End -!@@@@@@@@ */
   /* @@@@@@@@!- Music.ejs / (cute)video.ejs Start -!@@@@@@@@ */
   .music-wrap,
   .rounded {
@@ -1034,18 +1045,19 @@ h1 {
   }
 
   /* @@@@@@@@!- Music.ejs / (cute)video.ejs End -!@@@@@@@@ */
-/* @@@@@@@@!- Funny/Quote Start -!@@@@@@@@ */
-.joke-wrap,
-.quote-wrap {
-  margin-bottom: 9em;
-}
+  /* @@@@@@@@!- Funny/Quote Start -!@@@@@@@@ */
+  .joke-wrap,
+  .quote-wrap {
+    margin-bottom: 9em;
+  }
 
-/* @@@@@@@@!- Funny/Quote End -!@@@@@@@@ */
-/* @@@@@@@@!- Home/Options Start -!@@@@@@@@ */
-.home-header  {
-  margin-bottom: 8em;
-}
-/* @@@@@@@@!- Home/Options End -!@@@@@@@@ */
+  /* @@@@@@@@!- Funny/Quote End -!@@@@@@@@ */
+  /* @@@@@@@@!- Home/Options Start -!@@@@@@@@ */
+  .home-header {
+    margin-bottom: 8em;
+  }
+
+  /* @@@@@@@@!- Home/Options End -!@@@@@@@@ */
 }
 
 
