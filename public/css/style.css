@@ -260,12 +260,12 @@ h1 {
   margin-bottom: 0.45em;
   display: flex;
   flex-direction: column;
-  height: 8em;
+  height: 10em;
   padding-top: 1em;
 }
 
 .journal-entry li:nth-of-type(1) {
-  height: 10em;
+  height: 12em;
   padding-top: 2.9em;
 
 }
@@ -279,6 +279,14 @@ h1 {
   margin-top: 0.4em;
   align-self: flex-end;
   margin-bottom: 0.875em;
+}
+
+.journal-preview-text {
+  color: white; 
+  text-overflow: ellipsis; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  line-height: 16px; 
 }
 
 /* ------------------ journal/index.ejs End ---------------------- */
