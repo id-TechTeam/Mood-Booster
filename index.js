@@ -275,20 +275,19 @@ app.get('/getPicture/:selected', async (req, res) => {
 // code to access Joke API 
 app.get('/getJoke/', async (req, res) => {
     try {
-        //const selected = req.params.selected;
-        const config = {
-            headers: {
-                'x-rapidapi-key': process.env.JOKE_API_KEY,
-                'x-rapidapi-host': 'joke3.p.rapidapi.com'
-            }
-        }
-        var response = await axios.get('https://joke3.p.rapidapi.com/v1/joke', config)
-        console.log(response);
 
-        response = response.data.content;
+        axios.get('https://official-joke-api.appspot.com/jokes/general/random')
+            .then(function (response) {
+                // handle success
+                console.log("this is the joke object: ", (response.data[0]))
+                res.send((response.data[0]));
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error)
+                res.send(error);
+            })
 
-        console.log(response);
-        res.send(response);
     } catch (e) {
         console.log("error", e)
         res.send(e);
