@@ -20,6 +20,7 @@ const journalsRouter = require('./routes/journals.js');
 const initializePassport = require("./public/serverjs/passport-config.js");
 var Journal = require('./models/journal');
 var User = require('./models/user');
+var axios = require('axios');
 
 
 //Connect to database
@@ -247,6 +248,51 @@ function checkNotAuthenticated(req, res, next) {
     }
 }
 
+// code to access Picture API from Unsplash
+app.get('/getPicture/:selected', async (req, res) => {
+    try {
+        const selected = req.params.selected;
+        const config = {
+            headers: {
+                'Accept-Version': 'v1',
+                Authorization: process.env.PIC_API_KEY
+            }
+        }
+        var response = await axios.get('https://api.unsplash.com/photos/random?query=' + selected, config)
+        console.log(response);
+
+        response = response.data;
+
+        console.log(response);
+        res.send(response);
+    } catch (e) {
+        console.log("error", e)
+        res.send(e);
+    }
+})
+
+// code to access Joke API 
+app.get('/getJoke/', async (req, res) => {
+    try {
+        //const selected = req.params.selected;
+        const config = {
+            headers: {
+                'x-rapidapi-key': process.env.JOKE_API_KEY,
+                'x-rapidapi-host': 'joke3.p.rapidapi.com'
+            }
+        }
+        var response = await axios.get('https://joke3.p.rapidapi.com/v1/joke', config)
+        console.log(response);
+
+        response = response.data.content;
+
+        console.log(response);
+        res.send(response);
+    } catch (e) {
+        console.log("error", e)
+        res.send(e);
+    }
+})
 
 //Server starts here with a port of 3000
 app.listen(3000);

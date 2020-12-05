@@ -1,7 +1,10 @@
-<%- include('../partials/header.ejs') %>
+<%- include('../partials/header-partial-bg.ejs') %>
 
-<div class="container">
-    <h1 class="mb-4">Edit Journal</h1>
+<div class="partial-bg">
+    <h1>Edit Journal</h1>
+</div>
+
+<div class="form-wrap edit">
     <form id="journalForm" action="/journals/<%= journal._id %>?_method=PUT" method="POST">
         <%- include('_form_fields') %>
     </form>

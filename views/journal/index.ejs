@@ -11,10 +11,11 @@
         <ul class="journal-entry">
             <% journals.forEach(journal => { %>
             <li>
-                <a href="/journals/<%=journal._id%>">
+                <h2>
                     <%= journal.heading %>
-                </a>
-                <p><%= journal.createdAt.toLocaleDateString() %></p>
+                </h2>
+                <p class="journal-date"><%= journal.createdAt.toLocaleDateString() %></p>
+                <a href="/journals/<%=journal._id%>" class="button btn block blue-btn">Read more</a>
             </li>
 
             <% }) %>
