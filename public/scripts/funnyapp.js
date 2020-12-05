@@ -1,4 +1,5 @@
-const jokes = document.querySelector('#joke');
+const jokeSetup = document.querySelector('#jokeSetup');
+const jokePunchline = document.querySelector('#jokePunchline');
 const btn = document.querySelector('#btn');
 
 
@@ -6,9 +7,13 @@ const btn = document.querySelector('#btn');
 
 const addNewJoke = async () => {
     //clear the screen from old jokes
-    jokes.innerHTML = "";
-    const jokeText = await getJoke();
-    jokes.append(jokeText.data);
+    jokeSetup.innerHTML = "";
+    jokePunchline.innerHTML = "";
+    const jokeJSON = await getJoke();
+    const _jokeSetup = jokeJSON.data.setup;
+    const _jokePunchline = jokeJSON.data.punchline;
+    jokeSetup.append(_jokeSetup);
+    jokePunchline.append(_jokePunchline);
 
 }
 
