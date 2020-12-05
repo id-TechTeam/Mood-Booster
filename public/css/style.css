@@ -506,7 +506,8 @@ h1 {
   margin: 2.1em auto;
 }
 
-#joke,
+#jokeSetup,
+#jokePunchline,
 .blockquote {
   font-family: 'Lato', sans-serif;
   font-weight: 600;
@@ -516,8 +517,13 @@ h1 {
   text-align: center;
   width: 18.46em;
   height: 10.73em;
-  margin: 10.2em auto;
+  margin: 6.2em auto;
+  margin-bottom: 0;
   padding: 0.5em;
+}
+
+#jokePunchline {
+  margin-top: 0;
 }
 
 .blockquote {
