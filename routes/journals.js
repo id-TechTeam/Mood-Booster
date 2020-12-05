@@ -35,6 +35,7 @@ router.get("/edit/:id", checkAuthenticated, async (req, res) => {
             user.isSignedIn = true;
             delete user.password;
             const journal = await Journal.findById(req.params.id);
+            journal.createdAt = (journal.createdAt).toLocaleDateString();
             res.render('journal/edit.ejs', { journal: journal, user: user });
         } catch (err) {
             console.log(err);
@@ -83,13 +84,10 @@ function saveJournalAndRedirect(path) {
         journal.content = req.body.content;
         journal.heading = req.body.heading;
         journal.owner = req.user;
-        // remove the zero from the day if there is one. Otherwise, it sets the date back one day. Not really sure why.
-        var dateStr = (req.body.createdAt).toString();
-        var day = dateStr.slice(-2);
-        day = (parseInt(day)).toString();
-        dateStr = dateStr.slice(0, 8);
-        dateStr += day;
-        journal.createdAt = (new Date(parseInt(req.body.createdAt).toString())).valueOf();
+        var Date_From_Form = new Date(req.body.createdAt);
+        var tzOffset = req.body.timezoneDifference;
+        var newDate = new Date(Date_From_Form.getTime() + tzOffset * 60 * 1000);
+        journal.createdAt = newDate;
         try {
             journal = await journal.save();
             res.redirect(`/journals/${journal._id}`)
