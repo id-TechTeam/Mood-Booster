@@ -3,10 +3,30 @@
     <label for="heading" class="hide-element">Your headline</label>
 </div>
 
-<div class="form-group post-date">
+<!-- Grab Date from DB and adjust it to local time -->
+<% var dateStr = journal.createdAt.toLocaleDateString() %>
+<!-- Replace '/' to spaces ex: 12/4/2020 => 12 4 2020-->
+<% dateStr = dateStr.replace(new RegExp('/', 'g'), ' '); %>
+
+<!-- Grab month, save it, remove it from main string. -->
+<% var month = parseInt(dateStr) %>
+<% dateStr = dateStr.replace(month, '') %>
+<% month = ("0"+month).slice(-2) %>
+
+<!-- Grab day, save it, remove it from main string. -->
+<% var day = parseInt(dateStr) %>
+<% dateStr = dateStr.replace(day, '') %>
+<% day = ("0"+day).slice(-2) %>
+
+<!-- Grab year -->
+<% var year = parseInt(dateStr) %>
+
+<!-- Hidden input for back end -->
+<input style="display: none;" type="number" name="timezoneDifference" value="<%= (new Date()).getTimezoneOffset() %>">
+
+<div class=" form-group post-date">
     <!-- Date needs a correct backend destination -->
-    <input required type="date" name="createdAt"
-        value="<%= new Date(journal.createdAt).getFullYear() %>-<%= ("0" + (new Date(journal.createdAt).getMonth()+1)).slice(-2) %>-<%= ("0" + (new Date(journal.createdAt).getDay()-1)).slice(-2) %>">
+    <input required type="date" name="createdAt" value="<%= year %>-<%= month %>-<%= day %>">
 </div>
 
 <div class="form-group post-content">

@@ -15,6 +15,7 @@
                     <%= journal.heading %>
                 </h2>
                 <p class="journal-date"><%= journal.createdAt.toLocaleDateString() %></p>
+                <p class="journal-preview-text"><%= journal.content %></p>
                 <a href="/journals/<%=journal._id%>" class="button btn block blue-btn">Read more</a>
             </li>
 
