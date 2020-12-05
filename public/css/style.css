@@ -1,4 +1,3 @@
-
 /* ------------------Basics Start---------------------- */
 
 body {
@@ -167,8 +166,12 @@ h1 {
   overflow: scroll;
   position: relative;
   width: 90%;
-  height: 39.07em;
-  margin: 11.67em 0 0 1.17em;
+  height: 40.57em;
+  margin: 9.17em 0 0 1.17em;
+}
+
+.profile-wrap:first-child {
+  margin-top: 3em;
 }
 
 .profile-wrap {
@@ -202,6 +205,10 @@ h1 {
 
 .pic-container.patrick {
   background: center/cover no-repeat url(/images/Patrick.jpg);
+}
+
+.pic-container.maya {
+  background: center/cover no-repeat url(/images/mayabuserde.png);
 }
 
 .about-txt-container {
@@ -260,12 +267,12 @@ h1 {
   margin-bottom: 0.45em;
   display: flex;
   flex-direction: column;
-  height: 8em;
+  height: 10em;
   padding-top: 1em;
 }
 
 .journal-entry li:nth-of-type(1) {
-  height: 10em;
+  height: 12em;
   padding-top: 2.9em;
 
 }
@@ -279,6 +286,14 @@ h1 {
   margin-top: 0.4em;
   align-self: flex-end;
   margin-bottom: 0.875em;
+}
+
+.journal-preview-text {
+  color: white; 
+  text-overflow: ellipsis; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  line-height: 16px; 
 }
 
 /* ------------------ journal/index.ejs End ---------------------- */
@@ -395,7 +410,7 @@ h1 {
   font-weight: 400;
   font-size: 14px;
   line-height: 186%;
- 
+
 }
 
 /* ------------------ journal/show.ejs End ---------------------- */
@@ -946,6 +961,42 @@ h1 {
 }
 
 
+@media screen and (min-height: 900px) {
+
+.about-wrap {
+  height: 46em;
+}
+
+.journal-wrap {
+  height: 32.1;
+}
+
+  /* @@@@@@@@!- Music.ejs / (cute)video.ejs Start -!@@@@@@@@ */
+  .music-wrap,
+  .rounded {
+    height: 28em;
+  }
+
+  /* @@@@@@@@!- Music.ejs / (cute)video.ejs End -!@@@@@@@@ */
+  /* @@@@@@@@!- Funny/Quote Start -!@@@@@@@@ */
+  .joke-wrap,
+  .quote-wrap {
+    margin-bottom: 6em;
+  }
+
+  /* @@@@@@@@!- Funny/Quote End -!@@@@@@@@ */
+
+   /* @@@@@@@@!- Home/Options Start -!@@@@@@@@ */
+   #content-wrap {
+     margin-bottom: 6em;
+   }
+   /* @@@@@@@@!- Home/Options End -!@@@@@@@@ */
+   }
+ 
+   
+
+
+
 @media screen and (min-width: 1000px) {
 
   /* @@@@@@@@!- About Start -!@@@@@@@@ */
@@ -960,7 +1011,44 @@ h1 {
 
   /* @@@@@@@@!- About End -!@@@@@@@@ */
 
+  /* @@@@@@@@!- Music.ejs Start -!@@@@@@@@ */
+  .music-wrap {
+    max-width: 900px;
+  }
+
+  /* @@@@@@@@!- Music.ejs Start -!@@@@@@@@ */
 }
+
+@media screen and (min-height: 1000px) {
+.help-wrap, .about-wrap{
+  height: 53em;
+  margin-top: 9em;}
+
+  .journal-wrap {
+  height: 39.2em;
+}
+  /* @@@@@@@@!- Music.ejs / (cute)video.ejs Start -!@@@@@@@@ */
+  .music-wrap,
+  .rounded {
+    height: 34em;
+  }
+
+  /* @@@@@@@@!- Music.ejs / (cute)video.ejs End -!@@@@@@@@ */
+/* @@@@@@@@!- Funny/Quote Start -!@@@@@@@@ */
+.joke-wrap,
+.quote-wrap {
+  margin-bottom: 9em;
+}
+
+/* @@@@@@@@!- Funny/Quote End -!@@@@@@@@ */
+/* @@@@@@@@!- Home/Options Start -!@@@@@@@@ */
+.home-header  {
+  margin-bottom: 8em;
+}
+/* @@@@@@@@!- Home/Options End -!@@@@@@@@ */
+}
+
+
 
 
 @media screen and (min-width: 1100px) {
