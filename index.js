@@ -11,6 +11,7 @@ var app = express();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var bcrypt = require('bcrypt');
+var port = process.env.PORT || 3000;
 var session = require('express-session');
 var flash = require('express-flash');
 var passport = require('passport');
@@ -295,4 +296,4 @@ app.get('/getJoke/', async (req, res) => {
 })
 
 //Server starts here with a port of 3000
-app.listen(3000);
+app.listen(port);
