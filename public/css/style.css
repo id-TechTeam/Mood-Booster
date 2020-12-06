@@ -454,7 +454,7 @@ h1 {
 
 .help-box {
   width: 100%;
-  height: 14.44em;
+  /* height: 14.44em; */
   background: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.49);
   margin-bottom: 0.94em;
@@ -463,7 +463,7 @@ h1 {
 }
 
 .help-box:nth-of-type(2) {
-  height: 16.5em
+  /* height: 16.5em */
 }
 
 .help-box h2 {
@@ -930,13 +930,13 @@ h1 {
   }
 
   /* @@@@@@@@!- Help -!@@@@@@@@ */
-  .help-box {
+  /* .help-box {  
     height: 26em;
-  }
+  } */
 
-  .help-box:nth-of-type(2) {
+  /* .help-box:nth-of-type(2) {
     height: 29em;
-  }
+  } */
 
   /* @@@@@@@@!- About -!@@@@@@@@ */
   .about-wrap,
