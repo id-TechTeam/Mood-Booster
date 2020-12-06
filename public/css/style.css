@@ -759,7 +759,7 @@ h1 {
 
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@ Media Start @@@@@@@@@@@@@@@@@@@@@@@@@ */
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 300px) {
     /* @@@@@@@@!- Joke page Start -!@@@@@@@@ */
     #jokeSetup,
     #jokePunchline,
@@ -782,7 +782,7 @@ h1 {
   
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (max-width: 350px) {
   /* @@@@@@@@!- Joke page Start -!@@@@@@@@ */
   #jokeSetup,
   #jokePunchline,
@@ -805,7 +805,7 @@ h1 {
 }
 
 
-@media screen and (min-width: 415px) {
+@media screen and (max-width: 415px) {
 
   /* @@@@@@@@!- About Start -!@@@@@@@@ */
   .profile-wrap {
@@ -829,7 +829,7 @@ h1 {
 }
 
 
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 500px) {
 
   /* @@@@@@@@!- Help - Start -!@@@@@@@@ */
   .help-box {
@@ -887,7 +887,7 @@ h1 {
   /* @@@@@@@@!- (Cute)Video.ejs End -!@@@@@@@@ */
 }
 
-@media screen and (min-height: 568px) {
+@media screen and (max-height: 568px) {
 
   /* @@@@@@@@!- Basic -!@@@@@@@@ */
   body {
