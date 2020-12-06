@@ -21,7 +21,7 @@
 </div>
 
 <div class="container bottom-btn" id="btns-3">
-    <a href="/journals/edit/<%= journal._id %>" type="button" class="btn blue-btn btn-lg btn-block">Edit</a>
+    <a href="/journals/edit/<%= journal._id %>" class="btn blue-btn btn-lg btn-block">Edit</a>
     <form action="/journals/<%= journal._id %>?_method=DELETE" method="POST" class="d-inline">
         <button type="submit" class="btn transparent-btn btn-lg btn-block">Delete</button>
     </form>
