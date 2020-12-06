@@ -68,6 +68,11 @@ h1 {
   color: #ffffff;
 }
 
+.btn,
+.btn-lg {
+  font-size: 1.25em;
+}
+
 /* Block Buttons at bottom of page - End */
 
 /* Hiding class for reasons of accessibility to screen readers - Start */
@@ -603,6 +608,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1em;
+  max-height: 500px;
 }
 
 .music-video {
@@ -836,6 +842,118 @@ h1 {
   /* @@@@@@@@!- (Cute)Video.ejs End -!@@@@@@@@ */
 }
 
+@media screen and (min-height: 568px) {
+
+  /* @@@@@@@@!- Basic -!@@@@@@@@ */
+  body {
+    font-size: 9px;
+  }
+
+  #content-wrap {
+    padding-bottom: 6.6em;
+  }
+
+  /* @@@@@@@@!- Home -!@@@@@@@@ */
+  .header h1.display-5 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+  }
+
+  .mood-txt {
+    font-size: 23px;
+  }
+
+  .drop {
+    width: 10em;
+  }
+
+  .mood-box {
+    line-height: 1em;
+  }
+
+  /* @@@@@@@@!- Help -!@@@@@@@@ */
+  .help-box {
+    height: 26em;
+  }
+
+  .help-box:nth-of-type(2) {
+    height: 29em;
+  }
+
+  /* @@@@@@@@!- About -!@@@@@@@@ */
+  .about-wrap,
+  .help-wrap {
+    height: 45em;
+  }
+
+  .pic-container {
+    height: 21em;
+  }
+
+  /* @@@@@@@@!- Login/Register -!@@@@@@@@ */
+
+  .password_requirements_container {
+    margin-bottom: 1.3em;
+    margin-top: 0;
+    font-size: 10px;
+  }
+
+  .bullet-space {
+    font-size: 10px;
+  }
+
+  .register-wrap {
+    margin-bottom: 0.6em;
+  }
+
+  .login-wrap .form-box {
+    font-size: 12px;
+  }
+
+  .login-wrap {
+    margin-bottom: 5em;
+  }
+
+}
+
+/* @@@@@@@@!- Journal -!@@@@@@@@ */
+.journal-entry li:nth-of-type(1) {
+  height: 19em;
+}
+
+.journal-entry li {
+  height: 17em;
+}
+
+/* @@@@@@@@!- Cute -!@@@@@@@@ */
+#picture div.mt-3 {
+  margin-bottom: 0.5em;
+}
+
+.rounded {
+  height: 26.5em;
+}
+
+/* @@@@@@@@!- Funny/Quote -!@@@@@@@@ */
+#joke,
+.blockquote {
+  margin-top: 0.5em;
+}
+
+@media screen and (min-height: 610px) {
+  body {
+    font-size: 11px;
+  }
+
+  .header h1.display-5 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .drop {
+    width: 9em;
+  }
+}
 
 @media screen and (min-width: 630px) {
 
@@ -869,6 +987,123 @@ h1 {
 
 }
 
+@media screen and (min-height: 667px) {
+
+  /* @@@@@@@@!- Basics -!@@@@@@@@ */
+  body {
+    font-size: 13px;
+  }
+
+  #content-wrap {
+    padding-bottom: 6.1em;
+  }
+
+  /* @@@@@@@@!- Home -!@@@@@@@@ */
+  .mood-box {
+    line-height: 1.5em;
+  }
+
+  .mood-txt {
+    font-size: 27px;
+  }
+
+  .header h1.display-5 {
+    font-size: 3em;
+    margin-bottom: 0.4em;
+  }
+
+  .drop {
+    width: 7em;
+  }
+
+  /* @@@@@@@@!- Login/Register -!@@@@@@@@ */
+  .register-wrap {
+    margin-bottom: 0;
+  }
+
+  .password_requirements_container {
+    margin-bottom: 2.6em;
+    margin-top: 3em;
+    font-size: 10px;
+  }
+
+  .bullet-space {
+    font-size: 13px;
+  }
+
+
+  .login-wrap .form-box {
+    font-size: 13px;
+  }
+
+
+  /* @@@@@@@@!- About / Help -!@@@@@@@@ */
+  .about-wrap,
+  .help-wrap {
+    height: 38.7em;
+  }
+
+  .pic-container {
+    height: 14.5em;
+  }
+
+  .help-box {
+    height: 17em;
+  }
+
+  .help-box:nth-of-type(2) {
+    height: 19em;
+  }
+
+  /* @@@@@@@@!- Journal -!@@@@@@@@ */
+  .journal-wrap {
+    height: 30em;
+  }
+
+  .journal-entry li:nth-of-type(1) {
+    height: 14em;
+
+  }
+
+  .journal-entry li {
+    height: 12em;
+  }
+
+  .show-wrap {
+    height: 24em;
+  }
+
+  .form-wrap {
+    height: 26em;
+  }
+
+  /* @@@@@@@@!- Cute -!@@@@@@@@ */
+  #picture div.mt-3 {
+    margin-bottom: 0.5em;
+  }
+
+  .rounded {
+    height: 23em;
+  }
+
+  /* @@@@@@@@!- Music -!@@@@@@@@ */
+  .music-wrap {
+    height: 22.8em;
+  }
+
+  /* @@@@@@@@!- Funny/Quote -!@@@@@@@@ */
+  #joke,
+  .blockquote {
+    margin-top: 2em;
+  }
+
+  .joke-wrap,
+  .quote-wrap {
+    height: 21em;
+  }
+}
+
+
 
 @media screen and (min-width: 730px) {
 
@@ -879,6 +1114,47 @@ h1 {
 
   /* @@@@@@@@!- About End -!@@@@@@@@ */
 
+}
+
+@media screen and (min-height: 736px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* @@@@@@@@!- Login/Register -!@@@@@@@@ */
+  .password_requirements_container {
+    margin-bottom: 4em;
+    margin-top: 4em;
+    font-size: 13px;
+  }
+
+  .bullet-space {
+    font-size: 13px;
+  }
+
+  /* @@@@@@@@!- About / Help -!@@@@@@@@ */
+  .about-wrap,
+  .help-wrap {
+    height: 40.8em;
+  }
+
+  .pic-container {
+    height: 14.5em;
+  }
+
+  .help-box {
+    height: 16em;
+  }
+
+  .help-box:nth-of-type(2) {
+    height: 17em;
+  }
+}
+
+@media screen and (min-height: 750px) {
+  body {
+    font-size: 14.5px;
+  }
 }
 
 @media screen and (min-width: 765px) {
@@ -939,6 +1215,55 @@ h1 {
     margin-bottom: 1em;
   }
 
+}
+
+
+
+@media screen and (min-height: 812px) {
+
+  /* @@@@@@@@!- Basic -!@@@@@@@@ */
+  body {
+    font-size: 16px;
+  }
+
+  /* @@@@@@@@!- Journal -!@@@@@@@@ */
+  .journal-wrap {
+
+    height: 32.8em;
+  }
+
+  .journal-entry li:nth-of-type(1) {
+    height: 12em;
+    padding-top: 2.9em;
+  }
+
+  .journal-entry li {
+    height: 10em;
+  }
+
+  /* @@@@@@@@!- Funny/Quote -!@@@@@@@@ */
+  #joke,
+  .blockquote {
+    margin-top: 6em;
+  }
+
+  /* @@@@@@@@!- About/Help -!@@@@@@@@ */
+  .about-wrap,
+  .help-wrap {
+    height: 40.57em
+  }
+
+  /* @@@@@@@@!- Cute -!@@@@@@@@ */
+  .rounded {
+    height: 28em;
+  }
+
+  /* @@@@@@@@!- Music -!@@@@@@@@ */
+  .music-wrap {
+    height: 25.5em;
+  }
+
+  .show-wrap {}
 }
 
 @media screen and (min-width: 830px) {
@@ -1031,13 +1356,15 @@ h1 {
 }
 
 @media screen and (min-height: 1000px) {
- /* @@@@@@@@!- Help/About Start -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Help/About Start -!@@@@@@@@ */
   .help-wrap,
   .about-wrap {
     height: 53em;
     margin-top: 9em;
   }
- /* @@@@@@@@!- Help/About End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Help/About End -!@@@@@@@@ */
   /* @@@@@@@@!- Journal Start -!@@@@@@@@ */
   .journal-wrap {
     height: 39.2em;
