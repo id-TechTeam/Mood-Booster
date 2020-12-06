@@ -19,8 +19,6 @@ var bools = {
     notAscendDescend: false,
 }
 
-console.log(registerButton);
-
 pwinput.addEventListener("input", function () {
     var string = this.value;
     var username = usernameInput.value;

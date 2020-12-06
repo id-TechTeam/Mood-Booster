@@ -10,7 +10,6 @@ function initialize(passport, getUserByUsername, getUserById) {
             return done(null, false, { message: "No user with that username" });
         }
         try {
-            console.log("user: ", user);
             //compare password
             if (await bcrypt.compare(password, user.password)) {
                 //correct password
