@@ -1,7 +1,10 @@
 /* ------------------Basics Start---------------------- */
 
 body {
-
+  width: 100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
   font-family: 'Poppins', sans-serif;
   color: white;
   background: center/cover no-repeat url(/images/clouds.jpg);
@@ -10,6 +13,7 @@ body {
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
+  min-height: -webkit-fill-available;
 }
 
 h1,
