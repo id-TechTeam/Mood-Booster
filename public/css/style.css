@@ -522,13 +522,13 @@ h1 {
   text-align: center;
   width: 18.46em;
   height: 10.73em;
-  margin: 6.2em auto;
+  margin: 3.2em auto 0;
   margin-bottom: 0;
   padding: 0.5em;
 }
 
-#jokePunchline {
-  margin-top: 0;
+#jokePunchline,#jokeSetup {
+  height: 6em;
 }
 
 .blockquote {
@@ -759,6 +759,51 @@ h1 {
 
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@ Media Start @@@@@@@@@@@@@@@@@@@@@@@@@ */
+@media screen and (min-width: 300px) {
+    /* @@@@@@@@!- Joke page Start -!@@@@@@@@ */
+    #jokeSetup,
+    #jokePunchline,
+    .blockquote {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 160.5%;
+      width: 18.46em;
+      height: 7.73em;
+      margin: 3em auto 0;
+      margin-bottom: 0;
+      padding: 0.5em;
+    }
+
+    #jokePunchline,#jokeSetup {
+      height: 6em;
+    }
+    /* @@@@@@@@!- Joke page end -!@@@@@@@@ */
+  
+}
+
+@media screen and (min-width: 350px) {
+  /* @@@@@@@@!- Joke page Start -!@@@@@@@@ */
+  #jokeSetup,
+  #jokePunchline,
+  .blockquote {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 160.5%;
+    width: 18.46em;
+    height: 7.73em;
+    margin: 3em auto 0;
+    margin-bottom: 0;
+    padding: 0.5em;
+}
+
+#jokePunchline,#jokeSetup {
+  height: 6em;
+}
+/* @@@@@@@@!- Joke page end -!@@@@@@@@ */
+}
+
 
 @media screen and (min-width: 415px) {
 
