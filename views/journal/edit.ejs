@@ -5,7 +5,7 @@
     <h1>Edit Journal</h1>
 </div>
 
-<div class="form-wrap edit">
+<div class="form-wrap edit moveDown">
     <form id="journalForm" action="/journals/<%= journal._id %>?_method=PUT" method="POST">
         <%- include('_form_fields') %>
     </form>
