@@ -215,6 +215,7 @@ app.post("/users/register", checkNotAuthenticated, async (req, res) => {
                 console.log(err);
             } else {
                 fetchUsers();
+                console.log("created user: ", createdUser)
                 res.redirect('/users/login');
             }
         })
