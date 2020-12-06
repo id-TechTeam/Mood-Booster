@@ -197,6 +197,7 @@ app.post("/users/register", checkNotAuthenticated, async (req, res) => {
 
 
     try {
+        console.log(req.body.username);
         passReq.meetsMinReq(req.body.password);
         passReq.meetsMaxReq(req.body.password);
         passReq.hasUpperCase(req.body.password);
@@ -206,7 +207,6 @@ app.post("/users/register", checkNotAuthenticated, async (req, res) => {
         passReq.notDescendOrAscend(req.body.password);
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
         var newUser = {
-            id: Date.now().toString(),
             username: req.body.username,
             password: hashedPassword,
         };
@@ -215,6 +215,7 @@ app.post("/users/register", checkNotAuthenticated, async (req, res) => {
                 console.log(err);
             } else {
                 fetchUsers();
+                console.log("created user: ", createdUser)
                 res.redirect('/users/login');
             }
         })

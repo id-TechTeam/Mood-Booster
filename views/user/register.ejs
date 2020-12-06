@@ -14,17 +14,18 @@
 <%= messages.error %>
 <% } %>
 
-<div class="register-wrap">
+<div class="register-wrap moveDown">
     <form action="/users/register" method="POST">
 
         <div class="form-box reg-password">
             <label for="username" class="hide-element">Username</label>
-            <input type="username" name="username" id="username" required placeholder="Username" />
+            <input type="username" name="username" id="username" required placeholder="Username" required
+                autocapitalize="off" />
         </div>
 
         <div class="form-box">
             <label for="password" class="hide-element">Password</label>
-            <input type="password" name="password" id="password" required placeholder="Password" />
+            <input type="password" name="password" id="password" required placeholder="Password" autocapitalize="off" />
         </div>
 
         <button class="button btn block blue-btn" id="register" type="submit"> <span class="submit-up">
@@ -54,7 +55,9 @@
     </ul>
 </div>
 
-<div class="reg-submit-btn"><p>Already have an account? <a href="/users/login">Log in</a></p></div>
+<div class="reg-submit-btn">
+    <p>Already have an account? <a href="/users/login">Log in</a></p>
+</div>
 
 <script src="/scripts/password_requirements.js"></script>
 

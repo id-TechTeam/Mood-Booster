@@ -56,7 +56,7 @@ body {
     top: 0;
     right: 0;
     z-index: 2;
-    height: 100vh;
+    min-height: -webkit-fill-available;
     width: 250px;
     background: rgba(123, 180, 206, 1);
     /* moves the navbar out of the screen, must be same as width */
@@ -154,8 +154,15 @@ body {
     display: block;
 }
 
+@media screen and (max-height: 560px) {
+    .nav__link {
+        font-size: 20px;
+    }
+}
 @media screen and (min-height: 560px) {
-    
+    .nav__link {
+        font-size: 24px;
+    }
     .nav__bottom .nav__link:last-child {
       margin-top: 0.3em;
     }
@@ -167,7 +174,9 @@ body {
   }
 
   @media screen and (min-height: 812px) {
-    
+    .nav__link {
+        font-size: 27px;
+    }
     .nav__bottom a:last-child {
         margin-bottom: 1.8em;
         margin-top: 2em;
