@@ -14,7 +14,7 @@
 <%= messages.error %>
 <% } %>
 
-<div class="register-wrap">
+<div class="register-wrap moveDown">
     <form action="/users/register" method="POST">
 
         <div class="form-box reg-password">
@@ -54,7 +54,9 @@
     </ul>
 </div>
 
-<div class="reg-submit-btn"><p>Already have an account? <a href="/users/login">Log in</a></p></div>
+<div class="reg-submit-btn">
+    <p>Already have an account? <a href="/users/login">Log in</a></p>
+</div>
 
 <script src="/scripts/password_requirements.js"></script>
 
