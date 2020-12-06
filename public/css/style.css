@@ -1,9 +1,12 @@
 /* ------------------Basics Start---------------------- */
 
 body {
-
+  width: 100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: purle;
   background: center/cover no-repeat url(/images/clouds.jpg);
   min-height: 100vh;
   position: relative;
