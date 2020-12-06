@@ -226,7 +226,7 @@ h1 {
 }
 
 .pic-container.luis {
-  background: center/cover no-repeat url(/images/luis.jpg);
+  background: center/cover no-repeat url(/images/luis.png);
 }
 
 .about-txt-container {
@@ -907,6 +907,10 @@ h1 {
     padding-bottom: 6.6em;
   }
 
+  #jokePunchline {
+    margin-top: 39px;
+  }
+
   /* @@@@@@@@!- Home -!@@@@@@@@ */
   .header h1.display-5 {
     font-size: 4em;
@@ -1009,7 +1013,7 @@ h1 {
   }
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (max-width: 630px) {
 
   /* @@@@@@@@!- About Start -!@@@@@@@@ */
   .profile-wrap {
@@ -1159,7 +1163,7 @@ h1 {
 
 
 
-@media screen and (min-width: 730px) {
+@media screen and (max-width: 730px) {
 
   /* @@@@@@@@!- About Start -!@@@@@@@@ */
   .profile-wrap {
@@ -1167,6 +1171,12 @@ h1 {
   }
 
   /* @@@@@@@@!- About End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Jokes Start -!@@@@@@@@ */
+#jokeSetup{
+  margin-top: 24px;
+}
+  /* @@@@@@@@!- Jokes End -!@@@@@@@@ */
 
 }
 
