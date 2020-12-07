@@ -3,13 +3,14 @@
 body {
 
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: purple;
   background: center/cover no-repeat url(/images/clouds.jpg);
   min-height: 100vh;
   position: relative;
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
+  min-height: -webkit-fill-available;
 }
 
 h1,
@@ -23,6 +24,7 @@ h1 {
 
 #content-wrap {
   padding-bottom: 4.22em;
+  height: 100vh;
 }
 
 .block {
@@ -217,7 +219,7 @@ h1 {
 }
 
 .pic-container.luis {
-  background: center/cover no-repeat url(/images/luis.jpg);
+  background: center/cover no-repeat url(/images/luis.png);
 }
 
 .about-txt-container {

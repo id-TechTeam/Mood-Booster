@@ -1,0 +1,57 @@
+<header class="nav_header">
+    <button class="header__button" id="btnNav" type="button">
+        <i class="material-icons">menu</i>
+    </button>
+</header>
+<nav class="nav">
+    <div class="nav__links">
+        <div class="nav__top">
+            <a href="/" class="nav__link">Home</a>
+            <a href="#" class="nav__link dropdown-btn" id="angry">Angry<i
+                    class="material-icons">keyboard_arrow_down</i></a>
+            <div class="dropdown__container nav-links" id="angry_dropdown">
+                <a href="/healing/video/angry" class="nav__link">Cute boost</a>
+                <a href="/healing/music/angry" class="nav__link">Musical boost</a>
+                <a href="/healing/quote/angry" class="nav__link">Wise boost</a>
+                <a href="/healing/funny/angry" class="nav__link">Funny boost</a>
+            </div>
+            <a href="#" class="nav__link dropdown-btn" id="anxious">Anxious<i
+                    class="material-icons">keyboard_arrow_down</i></a>
+            <div class="dropdown__container nav-links" id="anxious_dropdown">
+                <a href="/healing/video/anxious" class="nav__link">Cute boost</a>
+                <a href="/healing/music/anxious" class="nav__link">Musical boost</a>
+                <a href="/healing/quote/anxious" class="nav__link">Wise boost</a>
+                <a href="/healing/funny/anxious" class="nav__link">Funny boost</a>
+            </div>
+            <a href="#" class="nav__link dropdown-btn" id="lonely">Lonely<i
+                    class="material-icons">keyboard_arrow_down</i></a>
+            <div class="dropdown__container nav-links" id="lonely_dropdown">
+                <a href="/healing/video/lonely" class="nav__link">Cute boost</a>
+                <a href="/healing/music/lonely" class="nav__link">Musical boost</a>
+                <a href="/healing/quote/lonely" class="nav__link">Wise boost</a>
+                <a href="/healing/funny/lonely" class="nav__link">Funny boost</a>
+            </div>
+            <a href="#" class="nav__link dropdown-btn" id="sad">Sad<i class="material-icons">keyboard_arrow_down</i></a>
+            <div class="dropdown__container nav-links" id="sad_dropdown">
+                <a href="/healing/video/sad" class="nav__link">Cute boost</a>
+                <a href="/healing/music/sad" class="nav__link">Musical boost</a>
+                <a href="/healing/quote/sad" class="nav__link">Wise boost</a>
+                <a href="/healing/funny/sad" class="nav__link">Funny boost</a>
+            </div>
+            <a href="/journals" class="nav__link">Journal</a>
+            <a href="/healing/help" class="nav__link nav__alone">Talk to someone</a>
+        </div>
+        <div class="nav__bottom">
+            <% if(user.isSignedIn) { %>
+            <form action="/users/logout?_method=DELETE" method="POST">
+                <button class="btn nav__link">Logout</button>
+            </form>
+            <% } else { %>
+            <a href="/users/login" class="btn nav__link">Login</a>
+            <% } %>
+            <a href="#" class="nav__link">Settings</a>
+            <a href="/about" class="nav__link ">About Us</a>
+        </div>
+    </div>
+    <div class="nav__overlay"></div>
+</nav>

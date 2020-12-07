@@ -1,0 +1,33 @@
+<%- include('../partials/header-partial-bg.ejs') %>
+
+
+<main>
+
+    <div class="partial-bg">
+        <h1>Your Journal</h1>
+    </div>
+
+    <div class="journal-wrap">
+        <ul class="journal-entry">
+            <% journals.forEach(journal => { %>
+            <li>
+                <h2>
+                    <%= journal.heading %>
+                </h2>
+                <p class="journal-date"><%= journal.createdAt.toLocaleDateString() %></p>
+                <p class="journal-preview-text"><%= journal.content %></p>
+                <a href="/journals/<%=journal._id%>" class="button btn block blue-btn">Read more</a>
+            </li>
+
+            <% }) %>
+        </ul>
+    </div>
+
+    <div class="container bottom-btn one-btn">
+        <a href="/journals/new" type="button" class="btn blue-btn btn-lg btn-block">Create a post</a>
+    </div>
+
+</main>
+
+
+<%- include('../partials/footer.ejs') %>

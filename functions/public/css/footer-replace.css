@@ -1,0 +1,24 @@
+/* css must be linked on the page directly under the header-link */
+
+#footer {
+    display: none;
+}
+
+
+/* Just copy footer into page/scrolling content and edit the ID's */
+#footer-replace {
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff86;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#cpyrght-replace {
+    margin-bottom: 2px;
+}
+
+#content-wrap {
+    padding-bottom: 0;
+}

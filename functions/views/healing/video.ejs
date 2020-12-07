@@ -1,0 +1,36 @@
+<%- include('../partials/header-partial-bg.ejs') %>
+<link rel="stylesheet" href="/css/3-block-btn.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+<div class="partial-bg">
+  <h1>Here is the boost</h1>
+</div>
+
+<div class="cute-wrap">
+  <div id="picture" class="container"></div>
+</div>
+
+
+<div class="container bottom-btn" id="btns-3">
+  <button type="button" id="btn" class="btn blue-btn btn-lg btn-block">One more boost</button>
+
+  <div class="radio-wrap btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn radio kitten btn-lg">
+      <input type="radio" name="selection" id="kitten" value="kitten"> Cats
+    </label>
+    <label class="btn active radio puppies btn-lg">
+      <input type="radio" name="selection" id="puppies" value="puppies" checked> Puppies
+    </label>
+    <label class="btn radio nature btn-lg">
+      <input type="radio" name="selection" id="nature" value="nature"> Nature
+    </label>
+  </div>
+
+  <a href="/" type="button" class="btn transparent-btn btn-lg btn-block">Go back</a>
+
+</div>
+
+
+<script src="/scripts/videoapp.js"></script>
+<%- include('../partials/footer.ejs') %>

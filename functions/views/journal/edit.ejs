@@ -1,0 +1,15 @@
+<%- include('../partials/header-partial-bg.ejs') %>
+<link rel="stylesheet" href="/css/lowered-block-btn.css">
+
+<div class="partial-bg">
+    <h1>Edit Journal</h1>
+</div>
+
+<div class="form-wrap edit">
+    <form id="journalForm" action="/journals/<%= journal._id %>?_method=PUT" method="POST">
+        <%- include('_form_fields') %>
+    </form>
+</div>
+
+
+<%- include('../partials/footer.ejs') %>

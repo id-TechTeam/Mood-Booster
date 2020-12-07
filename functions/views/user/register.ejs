@@ -1,0 +1,61 @@
+<%- include('../partials/header-partial-bg.ejs') %>
+<!-- included font awesome for the checkmark and times icons. I put them here to represent the meeting/non-meeting of the password requirements -->
+<!-- The icons can be changed by changing class with another from the font awesome website. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+<link rel="stylesheet" href="/css/no-content-wrap.css">
+
+<div class="partial-bg">
+    <h1>Create an account</h1>
+</div>
+
+<% if (messages.error) { %>
+<%= messages.error %>
+<% } %>
+
+<div class="register-wrap">
+    <form action="/users/register" method="POST">
+
+        <div class="form-box reg-password">
+            <label for="username" class="hide-element">Username</label>
+            <input type="username" name="username" id="username" required placeholder="Username" />
+        </div>
+
+        <div class="form-box">
+            <label for="password" class="hide-element">Password</label>
+            <input type="password" name="password" id="password" required placeholder="Password" />
+        </div>
+
+        <button class="button btn block blue-btn" id="register" type="submit"> <span class="submit-up">
+                Submit</span></button>
+    </form>
+
+</div>
+
+<div class="password_requirements_container">
+    <p class="password_requirements_header">Password requires all of the following:</p>
+    <ul class="password_requirements_list">
+        <li id="pw_req_min_length"><i class="far fa-circle"></i><span class="bullet-space">Minimum length of
+                8</span></li>
+        <li id="pw_req_max_length"><i class="far fa-circle"></i><span class="bullet-space">Maximum length of
+                32</span></li>
+        <li id="pw_req_lowercase"><i class="far fa-circle"></i><span class="bullet-space">At least 1 lowercase
+                letter</span></li>
+        <li id="pw_req_uppercase"><i class="far fa-circle"></i><span class="bullet-space">At least 1 uppercase
+                letter</span></li>
+        <li id="pw_req_number"><i class="far fa-circle"></i><span class="bullet-space">At least 1 number</span>
+        </li>
+        <li id="pw_req_notUsername"><i class="far fa-circle"></i><span class="bullet-space">Different than
+                username</span></li>
+        <li id="pw_req_notAscendDescend"><i class="far fa-circle"></i><span class="bullet-space">No
+                ascending/descending numbers or
+                letters</span></li>
+    </ul>
+</div>
+
+<div class="reg-submit-btn"><p>Already have an account? <a href="/users/login">Log in</a></p></div>
+
+<script src="/scripts/password_requirements.js"></script>
+
+<%- include('../partials/footer.ejs') %>

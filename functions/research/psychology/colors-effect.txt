@@ -1,0 +1,93 @@
+Color’s and Emotions
+
+Important: 
+- Feelings which are evoked by certain colours are not necessarily universal.
+Cultural differences sometimes play a role in how people perceive color. 
+- Darker colors tend to be associated with more negative emotions
+
+
+Red: 
+
+* most visible color (next to yellow)
+* grabs attention
+* warning color 
+    * stop signs
+    * red flags (person or situation)
+    * poisonous animals
+* associated with excitement, aggression, love (passion and desire)
+
+Usability for the Project: 
+Highlighting for urgant feelings like stress, anger, emergency.
+Leads the user without forcing him to think, in urgent situations.
+
+
+Blue:
+
+Important: cool blue colours can seem icy, distant, cold
+
+* viewed as non-threatening color
+* calls to mind feelings of calmness or serenity
+* can lower pulse rate and body temperature
+* can raise productivity 
+* can create feelings of sadness or aloofness 
+    * feeling blue
+* Blue light has a up waking effect on the brain
+    * blue light like the pale blue sky at daytime
+
+Usability for the Project:
+Background or partially usage to calm down the user.
+
+
+Green:
+
+* associated with nature
+* refreshing and tranquil color
+* represents also luck, health and jealousy
+* can improve reading ability
+    * speed and comprehension
+* relieve stress, calms down and heals
+
+Usability for the Project:
+Same as blue? Use the benefit of improved reading ability?
+
+
+Yellow: 
+
+* most visible color (next to red)
+* grabs attention
+* overuse can lead to visual fatigue
+* difficult to read
+* warm and strong energetic color
+    * can also increase metabolism
+* can create feelings of frustration and anger
+    * when overused
+
+Usability for the Project:
+Highlighting or background, but in small amounts -> not full backgrounds for example.
+
+
+Orange:
+
+Important: in United States linked to Halloween, can have a dark or cartoonish association for user.
+
+* combination of yellow and red
+    * energetic
+    * calls feeling to mind like excitement, enthusiasm, warmth
+* draws attention
+    * traffic signs and advertising
+* is linked to the beauty of sunset, fruits and autumn
+
+Usability for the Project:
+Small amounts of highlighting or leading the user.
+
+
+Brown
+
+* natural color
+* associated with resilience, dependability, security and safety but also warmth and comfort
+* can also create feelings of loneliness, sadness and isolation in large quantities
+    * it can seem vast, stark, and empty, like an enormous desert devoid of life
+
+Usability for the Project:
+Partially Usage for the background, buttons, borders
+not  sure about brown

@@ -1,0 +1,17 @@
+
+
+@media screen and (min-height: 560px) {
+    /* @@@@@@@@!- Basic -!@@@@@@@@ */
+
+    #content-wrap {
+        padding-bottom: 2.2em;
+    }
+}
+
+
+@media screen and (min-height: 812px) {
+
+    #content-wrap {
+        padding-bottom: 0.7em;
+    }
+}

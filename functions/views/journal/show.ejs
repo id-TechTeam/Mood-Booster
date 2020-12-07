@@ -1,0 +1,32 @@
+<%- include('../partials/header-partial-bg.ejs') %>
+<link rel="stylesheet" href="/css/3-block-btn.css">
+
+<div class="partial-bg">
+    <h1>Journal Post</h1>
+</div>
+
+
+<div class="show-wrap">
+    <div class="show-heading">
+        <h2><%= journal.heading %></h2>
+    </div>
+
+    <div class="show-date">
+        <p><%= journal.createdAt.toLocaleDateString() %></p>
+    </div>
+    <div class="show-content">
+        <p><%= journal.content %></p>
+    </div>
+
+</div>
+
+<div class="container bottom-btn" id="btns-3">
+    <a href="/journals/edit/<%= journal._id %>" type="button" class="btn blue-btn btn-lg btn-block">Edit</a>
+    <form action="/journals/<%= journal._id %>?_method=DELETE" method="POST" class="d-inline">
+        <button type="submit" class="btn transparent-btn btn-lg btn-block">Delete</button>
+    </form>
+    <a href="/journals" type="button" class="btn transparent-btn btn-lg btn-block">Go back</a>
+</div>
+
+
+<%- include('../partials/footer.ejs') %>

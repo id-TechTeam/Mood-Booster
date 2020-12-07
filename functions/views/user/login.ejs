@@ -1,0 +1,26 @@
+<%- include('../partials/header-partial-bg.ejs') %>
+<div class="partial-bg">
+    <h1>Login</h1>
+</div>
+
+<% if (messages.error) { %>
+<%= messages.error %>
+<% } %>
+
+<div class="login-wrap">
+    <form action="/users/login" method="POST">
+        <div class="form-box">
+            <label for="username" class="hide-element">Username</label>
+            <input type="username" name="username" id="username" placeholder="Username" required />
+        </div>
+        <div class="form-box">
+            <label for="password" class="hide-element">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password" required />
+        </div>
+        <button type="submit" class="btn blue-btn btn-lg btn-block">Submit</button>
+    </form>
+    <p>Don't have an account? <a href="/users/register">Sign up</a></p>
+</div>
+
+<%- include('../partials/footer.ejs') %>
+

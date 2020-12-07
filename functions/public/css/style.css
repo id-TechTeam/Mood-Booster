@@ -1,0 +1,1429 @@
+/* ------------------Basics Start---------------------- */
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: center/cover no-repeat url(/images/clouds.jpg);
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  min-height: -webkit-fill-available;
+}
+
+h1,
+.btn {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+#content-wrap {
+  padding-bottom: 4.22em;
+}
+
+.block {
+  display: block;
+}
+
+/* Focus behaviour for all forms - Start */
+.register-wrap input:focus,
+.form-wrap input:focus,
+.form-wrap textarea:focus,
+.login-wrap input:focus {
+  outline: none;
+}
+
+/* Focus behaviour for all forms - End */
+
+/* Block Buttons at bottom of page - Start */
+.bottom-btn {
+  margin-bottom: 0.46875em;
+}
+
+.blue-btn {
+  border: 1px solid #5EA7C8;
+  background: #5EA7C8;
+  font-weight: 700;
+  border-radius: 15px;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.transparent-btn {
+  border: 1px solid #5EA7C8;
+  font-weight: 700;
+  border-radius: 15px;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.blue-btn:hover,
+.transparent-btn:hover,
+.mood-box:hover {
+  background: #5EA7C8;
+  color: #ffffff;
+}
+
+.btn,
+.btn-lg {
+  font-size: 1.25em;
+}
+
+/* Block Buttons at bottom of page - End */
+
+/* Hiding class for reasons of accessibility to screen readers - Start */
+.hide-element {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Hiding class for reasons of accessibility to screen readers - End */
+
+/* ------------------- Basics End ------------------------- */
+
+
+
+
+/* ------------------ Home.ejs Start ---------------------- */
+
+.content {
+  position: relative;
+  height: 100%;
+}
+
+.drop-wrap {
+  margin: 0.5em auto;
+}
+
+.drop {
+  width: 5.86em;
+  fill: #ffffff;
+  margin-bottom: 0.8em;
+}
+
+h1 {
+  line-height: 45.5px;
+  margin-bottom: 1.6em;
+}
+
+
+.mood-box {
+  border: 1px solid white;
+  width: 45%;
+  height: 100%;
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 7px;
+  font-size: 26px;
+  margin: auto 0.08em;
+  transition: 0.5s;
+}
+
+
+#moods-wrap {
+
+  position: relative;
+  height: 20em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+}
+
+#moods-wrap .container {
+  height: 8em;
+  width: 100%;
+  margin: 0.4em auto;
+
+}
+
+/* ------------------ Home.ejs End ---------------------- */
+
+
+/* ------------------ healing_options.ejs Start ---------------------- */
+
+.options {
+  font-size: 25px;
+}
+
+.options-content {
+  margin-top: 15em;
+  margin-bottom: 0.4em;
+}
+
+/* ------------------ healing_options.ejs End ---------------------- */
+
+/* ------------------ about.ejs Start ---------------------- */
+
+.about-wrap {
+  overflow: scroll;
+  position: relative;
+  width: 90%;
+  height: 40.57em;
+  margin: 9.17em 0 0 1.17em;
+}
+
+.profile-wrap:first-child {
+  margin-top: 3em;
+}
+
+.profile-wrap {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15%;
+  display: flex;
+}
+
+.profile-wrap:last-child {
+  margin-bottom: 0;
+}
+
+.member-pic {
+  width: 100%;
+}
+
+.pic-container {
+  background: center/cover url(/images/Placeholder-picture.jpg);
+  display: inline-block;
+  width: 41.87%;
+  height: 11.56em;
+  border: 1px solid white;
+  border-radius: 7px;
+
+}
+
+.pic-container.ksenia {
+  background: center/cover no-repeat url(/images/Ksenia.jpeg);
+}
+
+.pic-container.patrick {
+  background: center/cover no-repeat url(/images/Patrick.jpg);
+}
+
+.pic-container.maya {
+  background: center/cover no-repeat url(/images/mayabuserde.png);
+}
+
+.pic-container.luis {
+  background: center/cover no-repeat url(/images/luis.png);
+}
+
+.about-txt-container {
+  width: 57%;
+}
+
+.about-txt-container h2 {
+  font-size: 26px;
+  padding-left: 0.6em;
+}
+
+.about-txt-container p {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px;
+  padding-left: 1.2em;
+  margin-bottom: 1.43em;
+}
+
+.about-txt-container a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ------------------ about.ejs End ---------------------- */
+
+/* ------------------ journal/index.ejs Start ---------------------- */
+.journal-wrap {
+  margin-bottom: 0.3em;
+  height: 32.8em;
+  width: 100%;
+  overflow: scroll;
+}
+
+.journal-entry {
+  list-style: none;
+  padding-left: 0;
+}
+
+.journal-entry h2 {
+  font-weight: 400;
+  font-size: 23px;
+  color: #ffffff;
+}
+
+.journal-date {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.journal-entry li {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0 1.171em 0 1.171em;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.45em;
+  display: flex;
+  flex-direction: column;
+  height: 10em;
+  padding-top: 1em;
+}
+
+.journal-entry li:nth-of-type(1) {
+  height: 12em;
+  padding-top: 2.9em;
+
+}
+
+.journal-entry .blue-btn {
+  width: 8em;
+  height: 1.923em;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 0.9615em;
+  margin-top: 0.4em;
+  align-self: flex-end;
+  margin-bottom: 0.875em;
+}
+
+.journal-preview-text {
+  color: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 16px;
+}
+
+/* ------------------ journal/index.ejs End ---------------------- */
+
+
+/* ------------------ journal/new.ejs/_form_fields.ejs/edit.ejs Start ---------------------- */
+
+.form-wrap.edit {
+  font-family: 'lato', sans-serif;
+  font-weight: 400;
+}
+
+.form-wrap {
+  margin: 0 1.9375em 1.875em;
+}
+
+.post-content,
+.post-date,
+.post-heading {
+  margin-bottom: 0;
+}
+
+.post-date {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.6em;
+  margin-top: 1.2em;
+}
+
+.post-heading input,
+.post-content textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  border-radius: 0.4375em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.13) inset;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.post-heading input {
+  height: 2.125em;
+}
+
+.post-heading input::placeholder {
+  padding-left: 0.5em;
+}
+
+.post-content textarea {
+  height: 20.125em;
+}
+
+.post-content textarea::placeholder {
+  padding-top: 2em;
+  padding-left: 0.5em;
+}
+
+
+.post-date input {
+  width: 9em;
+  font-size: 16px;
+  text-align: right;
+  color: #ffffff;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.49);
+}
+
+/* !!!!!!!!!!!!!!!!!!!!! Date selector needs to be styled !!!!!!!!!!!!!!!!!!!!!!! */
+
+
+
+
+
+/* ------------------ journal/new.ejs/_form_fields.ejs End ---------------------- */
+
+
+/* ------------------ journal/show.ejs Start ---------------------- */
+
+.show-wrap {
+  margin: 0 1.94em 0.3em 1.94em;
+}
+
+.show-heading {
+  width: 100%;
+  height: 3.31em;
+}
+
+.show-heading h2 {
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 40px;
+  height: 100%;
+}
+
+
+.show-date {
+  width: 8.8em;
+  height: 1.9em;
+}
+
+.show-date p {
+  height: 100%;
+}
+
+.show-content {
+  width: 100%;
+  height: 18em;
+  margin-top: 2em;
+}
+
+.show-content p {
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 186%;
+
+}
+
+/* ------------------ journal/show.ejs End ---------------------- */
+
+
+
+/* ------------------ help.ejs Start ---------------------- */
+
+.help-wrap {
+  position: relative;
+  align-self: flex-start;
+  margin-top: 10.1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40.5625em;
+  width: 85%;
+  overflow: scroll;
+}
+
+.help-box:nth-of-type(1) {
+  margin-top: 3em;
+}
+
+.help-box {
+  width: 100%;
+  height: 14.44em;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  margin-bottom: 0.94em;
+  border-radius: 7px;
+  padding: 1em 1em;
+}
+
+.help-box:nth-of-type(2) {
+  height: 16.5em
+}
+
+.help-box h2 {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 12.53px;
+  margin-bottom: 1em;
+}
+
+.help-box p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18.19px;
+}
+
+.help-box p:nth-of-type(2) {
+  margin-top: 2em
+}
+
+
+
+
+.help-box a {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.help-box .help-nmbr {
+  display: block;
+  margin-top: 1.1em;
+  font-weight: 600;
+  font-size: 13px;
+  color: rgba(94, 167, 200, 1);
+}
+
+.nmbr {
+  text-transform: uppercase;
+}
+
+
+/* ------------------ help.ejs End ---------------------- */
+
+
+/* ------------------ funny.ejs / quote.ejs End ---------------------- */
+
+.joke-wrap,
+.quote-wrap {
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  background: rgba(144, 187, 206, 0.5);
+  border-radius: 7px;
+  width: 84.5226%;
+  height: 25em;
+  margin: 2.1em auto;
+}
+
+#jokeSetup,
+#jokePunchline,
+.blockquote {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 192.5%;
+  text-transform: uppercase;
+  text-align: center;
+  width: 18.46em;
+  height: 10.73em;
+  margin: 6.2em auto;
+  margin-bottom: 0;
+  padding: 0.5em;
+}
+
+#jokePunchline {
+  margin-top: 0;
+}
+
+.blockquote {
+  margin-top: 6em;
+}
+
+/* ------------------ funny.ejs / quote.ejs End ---------------------- */
+
+
+/* ------------------ (cute) video.ejs Start ---------------------- */
+
+.radio-wrap {
+  width: 100%;
+  height: 3em;
+  margin: 0.1em auto 0.5em auto;
+}
+
+.radio {
+  background: none;
+  border: 1px solid rgba(94, 167, 200, 1);
+  color: #9AC5D9;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  padding-top: 0.4em;
+  height: 2.4em;
+}
+
+.radio.kitten {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.radio.nature {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.radio:active {
+  background-color: #5EA7C8;
+  color: #ffffff;
+}
+
+.radio:hover {
+  color: #ffffff;
+  background-color: #5EA7C8;
+}
+
+.rounded {
+  height: 23em;
+  width: 100%;
+  object-fit: contain;
+}
+
+#picture .mt-3 {
+  margin-top: 0 !important;
+  text-align: center;
+  margin-bottom: 6em;
+}
+
+#picture .mt-3,
+#picture .mt-3 a {
+  font-size: 8px;
+  color: #ffffff;
+}
+
+.mt-3 a {
+  text-decoration: underline;
+}
+
+/* ------------------ (cute) video.ejs End ---------------------- */
+
+/* ------------------ music.ejs Start ---------------------- */
+.music-wrap {
+  width: 90%;
+  height: 27em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  max-height: 500px;
+}
+
+.music-video {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------ music.ejs End ---------------------- */
+
+/* ------------------ Register.ejs Start ---------------------- */
+.register-wrap {
+  width: 76.8%;
+  margin: 1.9375em auto 5em auto;
+}
+
+.register-wrap form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-wrap .form-box {
+  margin: 0 !important;
+}
+
+.register-wrap #username,
+.register-wrap #password {
+  width: 100%;
+  height: 2.215em;
+}
+
+.register-wrap #username,
+.register-wrap #password {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+.register-wrap #username {
+  margin-bottom: 2.0625em;
+}
+
+.register-wrap a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.register-wrap input::placeholder {
+  color: #ffffff;
+}
+
+.password_requirements_container {
+  margin: 3em auto 3.5em auto;
+  padding-left: 0.65em;
+  padding-top: 0.4em;
+  width: 92.5%;
+  border: 1px solid white;
+  background: rgba(144, 187, 206, 0.5);
+  border-radius: 7px;
+  font-size: 14px;
+}
+
+.password_requirements_list {
+
+  list-style: none;
+  padding-left: 0;
+  font-size: 13px;
+}
+
+.bullet-space {
+  margin-left: 0.6em;
+}
+
+.reg-submit-btn {
+  font-size: 13px;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+.reg-submit-btn a {
+  color: white;
+  text-decoration: underline;
+}
+
+.register-wrap .blue-btn {
+  width: 7.769em;
+  height: 1.923em;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 0.9615em;
+  margin-top: 2.3125em;
+  align-self: flex-end;
+}
+
+/* ------------------ Register.ejs Start ---------------------- */
+
+/* ------------------ Login.ejs Start ---------------------- */
+.login-wrap {
+  width: 84.55%;
+  margin: 5em auto 8.655em auto;
+}
+
+.login-wrap #username,
+.login-wrap #password {
+  width: 100%;
+  height: 2.215em;
+}
+
+.login-wrap #username,
+.login-wrap #password {
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.13) inset;
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 10px;
+}
+
+.login-wrap #username {
+  margin-bottom: 0.375em;
+}
+
+.login-wrap #password {
+  margin-bottom: 2.1325em;
+}
+
+.login-wrap .blue-btn {
+  margin-bottom: 7.125em;
+  font-size: 15px;
+}
+
+.login-wrap p {
+  text-align: center;
+  font-size: 13px;
+}
+
+.login-wrap a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.login-wrap input::placeholder {
+  color: white;
+  padding-left: 1em;
+}
+
+
+
+/* ------------------ Login.ejs End ---------------------- */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@ Media Start @@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+@media screen and (min-width: 415px) {
+
+  /* @@@@@@@@!- About Start -!@@@@@@@@ */
+  .profile-wrap {
+    font-size: 20px;
+  }
+
+  /* @@@@@@@@!- About End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Login/Register Start -!@@@@@@@@ */
+  .login-wrap .blue-btn,
+  .login-wrap .form-box,
+  .register-wrap,
+  .password_requirements_container {
+    max-width: 350.88px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* @@@@@@@@!- Login/Register Start -!@@@@@@@@ */
+
+}
+
+
+@media screen and (min-width: 500px) {
+
+  /* @@@@@@@@!- Help - Start -!@@@@@@@@ */
+  .help-box {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .help-box p:nth-of-type(2) {
+    margin-top: 4em;
+  }
+
+  /* @@@@@@@@!- Help - End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Journal - Start -!@@@@@@@@ */
+  .journal-wrap,
+  .form-wrap,
+  .show-wrap {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* @@@@@@@@!- Journal - End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- About Start -!@@@@@@@@ */
+  .profile-wrap {
+    font-size: 25px;
+  }
+
+  .about-txt-container .block {
+    display: inline;
+  }
+
+  .about-txt-container p {
+    font-size: 15px;
+  }
+
+  .about-txt-container p:nth-of-type(2),
+  .about-txt-container p:nth-of-type(3) {
+    margin-top: 3em;
+  }
+
+  /* @@@@@@@@!- About End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- (Cute)Video.ejs Start -!@@@@@@@@ */
+  .rounded {
+    height: 26em;
+  }
+
+  #picture .mt-3 {
+    margin-bottom: 3em;
+  }
+
+  /* @@@@@@@@!- (Cute)Video.ejs End -!@@@@@@@@ */
+}
+
+@media screen and (min-height: 568px) {
+
+  /* @@@@@@@@!- Basic -!@@@@@@@@ */
+  body {
+    font-size: 9px;
+  }
+
+  #content-wrap {
+    padding-bottom: 6.6em;
+  }
+
+  /* @@@@@@@@!- Home -!@@@@@@@@ */
+  .header h1.display-5 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+  }
+
+  .mood-txt {
+    font-size: 23px;
+  }
+
+  .drop {
+    width: 10em;
+  }
+
+  .mood-box {
+    line-height: 1em;
+  }
+
+  /* @@@@@@@@!- Help -!@@@@@@@@ */
+  .help-box {
+    height: 26em;
+  }
+
+  .help-box:nth-of-type(2) {
+    height: 29em;
+  }
+
+  /* @@@@@@@@!- About -!@@@@@@@@ */
+  .about-wrap,
+  .help-wrap {
+    height: 45em;
+  }
+
+  .pic-container {
+    height: 21em;
+  }
+
+  /* @@@@@@@@!- Login/Register -!@@@@@@@@ */
+
+  .password_requirements_container {
+    margin-bottom: 1.3em;
+    margin-top: 0;
+    font-size: 10px;
+  }
+
+  .bullet-space {
+    font-size: 10px;
+  }
+
+  .register-wrap {
+    margin-bottom: 0.6em;
+  }
+
+  .login-wrap .form-box {
+    font-size: 12px;
+  }
+
+  .login-wrap {
+    margin-bottom: 5em;
+  }
+
+}
+
+/* @@@@@@@@!- Journal -!@@@@@@@@ */
+.journal-entry li:nth-of-type(1) {
+  height: 19em;
+}
+
+.journal-entry li {
+  height: 17em;
+}
+
+/* @@@@@@@@!- Cute -!@@@@@@@@ */
+#picture div.mt-3 {
+  margin-bottom: 0.5em;
+}
+
+.rounded {
+  height: 26.5em;
+}
+
+/* @@@@@@@@!- Funny/Quote -!@@@@@@@@ */
+#joke,
+.blockquote {
+  margin-top: 0.5em;
+}
+
+@media screen and (min-height: 610px) {
+  body {
+    font-size: 11px;
+  }
+
+  .header h1.display-5 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .drop {
+    width: 9em;
+  }
+}
+
+@media screen and (min-width: 630px) {
+
+  /* @@@@@@@@!- About Start -!@@@@@@@@ */
+  .profile-wrap {
+    font-size: 30px;
+  }
+
+  .about-txt-container h2 {
+    font-size: 30px;
+  }
+
+  .about-txt-container p {
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  .about-txt-container p:nth-of-type(2),
+  .about-txt-container p:nth-of-type(3) {
+    margin-top: 5em;
+  }
+
+  /* @@@@@@@@!- About End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Healing-options Start -!@@@@@@@@ */
+  .long-h1 span.block {
+    display: inline;
+  }
+
+  /* @@@@@@@@!- Healing-options End -!@@@@@@@@ */
+
+}
+
+@media screen and (min-height: 667px) {
+
+  /* @@@@@@@@!- Basics -!@@@@@@@@ */
+  body {
+    font-size: 13px;
+  }
+
+  #content-wrap {
+    padding-bottom: 6.1em;
+  }
+
+  /* @@@@@@@@!- Home -!@@@@@@@@ */
+  .mood-box {
+    line-height: 1.5em;
+  }
+
+  .mood-txt {
+    font-size: 27px;
+  }
+
+  .header h1.display-5 {
+    font-size: 3em;
+    margin-bottom: 0.4em;
+  }
+
+  .drop {
+    width: 7em;
+  }
+
+  /* @@@@@@@@!- Login/Register -!@@@@@@@@ */
+  .register-wrap {
+    margin-bottom: 0;
+  }
+
+  .password_requirements_container {
+    margin-bottom: 2.6em;
+    margin-top: 3em;
+    font-size: 10px;
+  }
+
+  .bullet-space {
+    font-size: 13px;
+  }
+
+
+  .login-wrap .form-box {
+    font-size: 13px;
+  }
+
+
+  /* @@@@@@@@!- About / Help -!@@@@@@@@ */
+  .about-wrap,
+  .help-wrap {
+    height: 38.7em;
+  }
+
+  .pic-container {
+    height: 14.5em;
+  }
+
+  .help-box {
+    height: 17em;
+  }
+
+  .help-box:nth-of-type(2) {
+    height: 19em;
+  }
+
+  /* @@@@@@@@!- Journal -!@@@@@@@@ */
+  .journal-wrap {
+    height: 30em;
+  }
+
+  .journal-entry li:nth-of-type(1) {
+    height: 14em;
+
+  }
+
+  .journal-entry li {
+    height: 12em;
+  }
+
+  .show-wrap {
+    height: 24em;
+  }
+
+  .form-wrap {
+    height: 26em;
+  }
+
+  /* @@@@@@@@!- Cute -!@@@@@@@@ */
+  #picture div.mt-3 {
+    margin-bottom: 0.5em;
+  }
+
+  .rounded {
+    height: 23em;
+  }
+
+  /* @@@@@@@@!- Music -!@@@@@@@@ */
+  .music-wrap {
+    height: 22.8em;
+  }
+
+  /* @@@@@@@@!- Funny/Quote -!@@@@@@@@ */
+  #joke,
+  .blockquote {
+    margin-top: 2em;
+  }
+
+  .joke-wrap,
+  .quote-wrap {
+    height: 21em;
+  }
+}
+
+
+
+@media screen and (min-width: 730px) {
+
+  /* @@@@@@@@!- About Start -!@@@@@@@@ */
+  .profile-wrap {
+    font-size: 35px;
+  }
+
+  /* @@@@@@@@!- About End -!@@@@@@@@ */
+
+}
+
+@media screen and (min-height: 736px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* @@@@@@@@!- Login/Register -!@@@@@@@@ */
+  .password_requirements_container {
+    margin-bottom: 4em;
+    margin-top: 4em;
+    font-size: 13px;
+  }
+
+  .bullet-space {
+    font-size: 13px;
+  }
+
+  /* @@@@@@@@!- About / Help -!@@@@@@@@ */
+  .about-wrap,
+  .help-wrap {
+    height: 40.8em;
+  }
+
+  .pic-container {
+    height: 14.5em;
+  }
+
+  .help-box {
+    height: 16em;
+  }
+
+  .help-box:nth-of-type(2) {
+    height: 17em;
+  }
+}
+
+@media screen and (min-height: 750px) {
+  body {
+    font-size: 14.5px;
+  }
+}
+
+@media screen and (min-width: 765px) {
+
+  /* @@@@@@@@!- Funny/Quote Start -!@@@@@@@@ */
+  .joke-wrap,
+  .quote-wrap {
+    max-width: 656px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* @@@@@@@@!- Funny/Quote End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Journal - Start -!@@@@@@@@ */
+  .journal-wrap,
+  .form-wrap,
+  .show-wrap {
+    max-width: 656px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* @@@@@@@@!- Journal - End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Bottom Button Start -!@@@@@@@@ */
+  a.btn-block,
+  button.btn-block,
+  .form-box {
+    max-width: 656px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #btns-3 {
+    max-width: 690px;
+  }
+
+  button.mood-box {
+    max-width: 311px;
+  }
+
+  /* @@@@@@@@!- Botton Button End -!@@@@@@@@ */
+
+
+  /* @@@@@@@@!- Home Start -!@@@@@@@@ */
+  .drop {
+    width: 8em;
+  }
+
+  /* @@@@@@@@!- Home End -!@@@@@@@@ */
+
+  .rounded {
+    height: 28em;
+  }
+
+  #picture .mt-3 {
+    margin-bottom: 1em;
+  }
+
+}
+
+
+
+@media screen and (min-height: 812px) {
+
+  /* @@@@@@@@!- Basic -!@@@@@@@@ */
+  body {
+    font-size: 16px;
+  }
+
+  /* @@@@@@@@!- Journal -!@@@@@@@@ */
+  .journal-wrap {
+
+    height: 32.8em;
+  }
+
+  .journal-entry li:nth-of-type(1) {
+    height: 12em;
+    padding-top: 2.9em;
+  }
+
+  .journal-entry li {
+    height: 10em;
+  }
+
+  /* @@@@@@@@!- Funny/Quote -!@@@@@@@@ */
+  #joke,
+  .blockquote {
+    margin-top: 6em;
+  }
+
+  /* @@@@@@@@!- About/Help -!@@@@@@@@ */
+  .about-wrap,
+  .help-wrap {
+    height: 40.57em
+  }
+
+  /* @@@@@@@@!- Cute -!@@@@@@@@ */
+  .rounded {
+    height: 28em;
+  }
+
+  /* @@@@@@@@!- Music -!@@@@@@@@ */
+  .music-wrap {
+    height: 25.5em;
+  }
+
+  .show-wrap {}
+}
+
+@media screen and (min-width: 830px) {
+
+  /* @@@@@@@@!- About Start -!@@@@@@@@ */
+  .profile-wrap {
+    font-size: 40px;
+  }
+
+  .pic-container {
+    max-width: 312.38px;
+    max-height: 404.59px;
+  }
+
+  .about-wrap {
+    margin-left: 5.5em;
+    width: 80%;
+  }
+
+  /* @@@@@@@@!- About End -!@@@@@@@@ */
+
+
+  /* @@@@@@@@!- Boxes Start -!@@@@@@@@ */
+  .options {
+    font-size: 27px;
+  }
+
+  /* @@@@@@@@!- Boxes End -!@@@@@@@@ */
+
+}
+
+
+@media screen and (min-height: 900px) {
+
+  .about-wrap {
+    height: 46em;
+  }
+
+  .journal-wrap {
+    height: 32.1;
+  }
+
+  /* @@@@@@@@!- Music.ejs / (cute)video.ejs Start -!@@@@@@@@ */
+  .music-wrap,
+  .rounded {
+    height: 28em;
+  }
+
+  /* @@@@@@@@!- Music.ejs / (cute)video.ejs End -!@@@@@@@@ */
+  /* @@@@@@@@!- Funny/Quote Start -!@@@@@@@@ */
+  .joke-wrap,
+  .quote-wrap {
+    margin-bottom: 6em;
+  }
+
+  /* @@@@@@@@!- Funny/Quote End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Home/Options Start -!@@@@@@@@ */
+  #content-wrap {
+    margin-bottom: 6em;
+  }
+
+  /* @@@@@@@@!- Home/Options End -!@@@@@@@@ */
+}
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+  /* @@@@@@@@!- About Start -!@@@@@@@@ */
+  .profile-wrap {
+    font-size: 45px;
+  }
+
+  .about-wrap {
+    margin-left: 9em;
+    width: 70%;
+  }
+
+  /* @@@@@@@@!- About End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Music.ejs Start -!@@@@@@@@ */
+  .music-wrap {
+    max-width: 900px;
+  }
+
+  /* @@@@@@@@!- Music.ejs Start -!@@@@@@@@ */
+}
+
+@media screen and (min-height: 1000px) {
+
+  /* @@@@@@@@!- Help/About Start -!@@@@@@@@ */
+  .help-wrap,
+  .about-wrap {
+    height: 53em;
+    margin-top: 9em;
+  }
+
+  /* @@@@@@@@!- Help/About End -!@@@@@@@@ */
+  /* @@@@@@@@!- Journal Start -!@@@@@@@@ */
+  .journal-wrap {
+    height: 39.2em;
+  }
+
+  /* @@@@@@@@!- Journal End -!@@@@@@@@ */
+  /* @@@@@@@@!- Music.ejs / (cute)video.ejs Start -!@@@@@@@@ */
+  .music-wrap,
+  .rounded {
+    height: 34em;
+  }
+
+  /* @@@@@@@@!- Music.ejs / (cute)video.ejs End -!@@@@@@@@ */
+  /* @@@@@@@@!- Funny/Quote Start -!@@@@@@@@ */
+  .joke-wrap,
+  .quote-wrap {
+    margin-bottom: 9em;
+  }
+
+  /* @@@@@@@@!- Funny/Quote End -!@@@@@@@@ */
+  /* @@@@@@@@!- Home/Options Start -!@@@@@@@@ */
+  .home-header {
+    margin-bottom: 8em;
+  }
+
+  /* @@@@@@@@!- Home/Options End -!@@@@@@@@ */
+}
+
+
+
+
+@media screen and (min-width: 1100px) {
+
+  /* @@@@@@@@!- About Start -!@@@@@@@@ */
+  .profile-wrap {
+    font-size: 50px;
+  }
+
+  /* @@@@@@@@!- About End -!@@@@@@@@ */
+
+}
+
+
+@media screen and (min-width: 1200px) {
+
+  /* @@@@@@@@!- About Start -!@@@@@@@@ */
+  .about-wrap {
+    margin-left: 17.5em;
+  }
+
+  .about-wrap {
+    width: 60%;
+  }
+
+  /* @@@@@@@@!- About End -!@@@@@@@@ */
+
+
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@ Media End @@@@@@@@@@@@@@@@@@@@@@@@@ */

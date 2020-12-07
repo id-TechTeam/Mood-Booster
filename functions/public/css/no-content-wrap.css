@@ -1,0 +1,7 @@
+/* Link that in your page when you dont need the padding of the whole content
+for the page (when you have not to align bottom btn at the same level) */
+
+#content-wrap {
+    padding: 0;
+}
+

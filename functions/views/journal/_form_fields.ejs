@@ -1,0 +1,44 @@
+<div class="form-group post-heading">
+    <input required type="text" name="heading" value="<%= journal.heading %>" placeholder="Give me a heading!">
+    <label for="heading" class="hide-element">Your headline</label>
+</div>
+
+<!-- Grab Date from DB and adjust it to local time -->
+<% var dateStr = journal.createdAt.toLocaleDateString() %>
+<!-- Replace '/' to spaces ex: 12/4/2020 => 12 4 2020-->
+<% dateStr = dateStr.replace(new RegExp('/', 'g'), ' '); %>
+
+<!-- Grab month, save it, remove it from main string. -->
+<% var month = parseInt(dateStr) %>
+<% dateStr = dateStr.replace(month, '') %>
+<% month = ("0"+month).slice(-2) %>
+
+<!-- Grab day, save it, remove it from main string. -->
+<% var day = parseInt(dateStr) %>
+<% dateStr = dateStr.replace(day, '') %>
+<% day = ("0"+day).slice(-2) %>
+
+<!-- Grab year -->
+<% var year = parseInt(dateStr) %>
+
+<!-- Hidden input for back end -->
+<input style="display: none;" type="number" name="timezoneDifference" value="<%= (new Date()).getTimezoneOffset() %>">
+
+<div class=" form-group post-date">
+    <!-- Date needs a correct backend destination -->
+    <input required type="date" name="createdAt" value="<%= year %>-<%= month %>-<%= day %>">
+</div>
+
+<div class="form-group post-content">
+    <!-- <input required type="text" name="content" value=""> -->
+    <textarea required name="content" form="journalForm"
+        placeholder="Fill me up! For example: 3 things you are thankful for today and 2 things you wanna make better tomorrow!"><%= journal.content %></textarea>
+    <label for="content" class="hide-element">Your text</label>
+</div>
+
+</div>
+
+<div class="container bottom-btn">
+    <button type="submit" class="btn blue-btn btn-lg btn-block">Save</button>
+    <a href="/journals" class="btn transparent-btn btn-lg btn-block">Cancel</a>
+</div>

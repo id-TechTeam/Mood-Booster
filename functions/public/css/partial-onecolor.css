@@ -1,0 +1,5 @@
+/* needs to be linked after partial-bg */
+
+body {
+    background: #7BB4CE;
+}

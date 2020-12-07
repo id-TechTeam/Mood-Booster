@@ -1,0 +1,179 @@
+body {
+    /* --header-height: 50px; */
+
+    margin: var(--header-height) 0 0 0;
+
+}
+
+/* to avoid clitch in the beginning when the page loads */
+/* .preload * {
+    transition: none !important;
+} */
+
+.nav_header {
+    position: absolute;
+    top: 1em;
+    left: -1em;
+    width: 100%;
+    height: var(--header-height);
+    background: none;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.header__button .material-icons {
+    font-size: 40px;
+}
+
+.header__button {
+    width: var(--header-height);
+    flex-shrink: 0;
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header__button:focus {
+    outline: none;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
+.dropdown__container {
+    display: none;
+    padding-left: 8px;
+    background: #86c1dd;
+}
+
+.dropdown__container a {
+    font-size: 18px;
+}
+
+.nav__links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    height: 100vh;
+    width: 250px;
+    background: rgba(123, 180, 206, 1);
+    /* moves the navbar out of the screen, must be same as width */
+    transform: translateX(250px);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__top,
+.nav__bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__top {
+    margin-top: 2em;
+}
+
+.nav__bottom a:last-child {
+    margin-bottom: 1.8em;
+    margin-top: 2em;
+}
+
+.nav__bottom .btn {
+    text-transform: none;
+}
+
+/* When navbar is opened brings it in by 250px */
+.nav--open .nav__links {
+    transform: translateX(0);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.nav__link {
+    display: inline-block;
+    align-items: center;
+    color: #fff;
+    font-weight: 400;
+    font-size: 27px;
+    text-decoration: none;
+    padding: 0.2em 5px;
+    background: transform 0.2s;
+    text-align: left;
+    width: 100%;
+    margin-left: 0.4em;
+    margin-top: 0;
+}
+
+.nav__alone {
+    margin-top: 1em;
+    margin-left: 0.4em;
+}
+
+
+/* .nav__link > i {
+    margin-right: 15px;
+} */
+
+.nav__link--active,
+.nav__link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.nav--open .nav__overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown-btn>i {
+    float: right;
+    padding-right: 20px;
+}
+
+.show {
+    display: block;
+}
+
+@media screen and (min-height: 560px) {
+    
+    .nav__bottom .nav__link:last-child {
+      margin-top: 0.3em;
+    }
+  
+    a.nav__link.nav__alone {
+      margin-top: 0.25em;
+      margin-bottom: 0.2em;
+    }
+  }
+
+  @media screen and (min-height: 812px) {
+    
+    .nav__bottom a:last-child {
+        margin-bottom: 1.8em;
+        margin-top: 2em;
+    }
+  
+    a.nav__link.nav__alone {
+        margin-top: 1em;
+    }
+  }
