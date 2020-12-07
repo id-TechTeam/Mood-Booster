@@ -1,7 +1,10 @@
 /* ------------------Basics Start---------------------- */
 
 body {
-
+  width: 100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
   font-family: 'Poppins', sans-serif;
   color: purple;
   background: center/cover no-repeat url(/images/clouds.jpg);
@@ -48,9 +51,14 @@ h1 {
 
 .blue-btn {
   border: 1px solid #5EA7C8;
-  background: #5EA7C8;
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  -webkit-border-radius: 15px; 
+  /* Firefox 1-3.6 */
+  -moz-border-radius: 15px;
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 15px; 
+  background-color: #5EA7C8;
   font-weight: 700;
-  border-radius: 15px;
   color: #ffffff;
   transition: 0.5s;
 }
@@ -447,7 +455,7 @@ h1 {
 
 .help-box {
   width: 100%;
-  height: 14.44em;
+  /* height: 14.44em; */
   background: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.49);
   margin-bottom: 0.94em;
@@ -456,7 +464,7 @@ h1 {
 }
 
 .help-box:nth-of-type(2) {
-  height: 16.5em
+  /* height: 16.5em */
 }
 
 .help-box h2 {
@@ -524,13 +532,13 @@ h1 {
   text-align: center;
   width: 18.46em;
   height: 10.73em;
-  margin: 6.2em auto;
+  margin: 3.2em auto 0;
   margin-bottom: 0;
   padding: 0.5em;
 }
 
-#jokePunchline {
-  margin-top: 0;
+#jokePunchline,#jokeSetup {
+  height: 6em;
 }
 
 .blockquote {
@@ -761,8 +769,53 @@ h1 {
 
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@ Media Start @@@@@@@@@@@@@@@@@@@@@@@@@ */
+@media screen and (max-width: 300px) {
+    /* @@@@@@@@!- Joke page Start -!@@@@@@@@ */
+    #jokeSetup,
+    #jokePunchline,
+    .blockquote {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 160.5%;
+      width: 18.46em;
+      height: 7.73em;
+      margin: 3em auto 0;
+      margin-bottom: 0;
+      padding: 0.5em;
+    }
 
-@media screen and (min-width: 415px) {
+    #jokePunchline,#jokeSetup {
+      height: 6em;
+    }
+    /* @@@@@@@@!- Joke page end -!@@@@@@@@ */
+  
+}
+
+@media screen and (max-width: 350px) {
+  /* @@@@@@@@!- Joke page Start -!@@@@@@@@ */
+  #jokeSetup,
+  #jokePunchline,
+  .blockquote {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 160.5%;
+    width: 18.46em;
+    height: 7.73em;
+    margin: 3em auto 0;
+    margin-bottom: 0;
+    padding: 0.5em;
+}
+
+#jokePunchline,#jokeSetup {
+  height: 6em;
+}
+/* @@@@@@@@!- Joke page end -!@@@@@@@@ */
+}
+
+
+@media screen and (max-width: 415px) {
 
   /* @@@@@@@@!- About Start -!@@@@@@@@ */
   .profile-wrap {
@@ -786,7 +839,7 @@ h1 {
 }
 
 
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 500px) {
 
   /* @@@@@@@@!- Help - Start -!@@@@@@@@ */
   .help-box {
@@ -844,7 +897,7 @@ h1 {
   /* @@@@@@@@!- (Cute)Video.ejs End -!@@@@@@@@ */
 }
 
-@media screen and (min-height: 568px) {
+@media screen and (max-height: 568px) {
 
   /* @@@@@@@@!- Basic -!@@@@@@@@ */
   body {
@@ -853,6 +906,10 @@ h1 {
 
   #content-wrap {
     padding-bottom: 6.6em;
+  }
+
+  #jokePunchline {
+    margin-top: 39px;
   }
 
   /* @@@@@@@@!- Home -!@@@@@@@@ */
@@ -874,13 +931,13 @@ h1 {
   }
 
   /* @@@@@@@@!- Help -!@@@@@@@@ */
-  .help-box {
+  /* .help-box {  
     height: 26em;
-  }
+  } */
 
-  .help-box:nth-of-type(2) {
+  /* .help-box:nth-of-type(2) {
     height: 29em;
-  }
+  } */
 
   /* @@@@@@@@!- About -!@@@@@@@@ */
   .about-wrap,
@@ -957,7 +1014,7 @@ h1 {
   }
 }
 
-@media screen and (min-width: 630px) {
+@media screen and (max-width: 630px) {
 
   /* @@@@@@@@!- About Start -!@@@@@@@@ */
   .profile-wrap {
@@ -1107,7 +1164,7 @@ h1 {
 
 
 
-@media screen and (min-width: 730px) {
+@media screen and (max-width: 730px) {
 
   /* @@@@@@@@!- About Start -!@@@@@@@@ */
   .profile-wrap {
@@ -1115,6 +1172,12 @@ h1 {
   }
 
   /* @@@@@@@@!- About End -!@@@@@@@@ */
+
+  /* @@@@@@@@!- Jokes Start -!@@@@@@@@ */
+#jokeSetup{
+  margin-top: 24px;
+}
+  /* @@@@@@@@!- Jokes End -!@@@@@@@@ */
 
 }
 

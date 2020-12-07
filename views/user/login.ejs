@@ -7,15 +7,15 @@
 <%= messages.error %>
 <% } %>
 
-<div class="login-wrap">
+<div class="login-wrap moveDown">
     <form action="/users/login" method="POST">
         <div class="form-box">
             <label for="username" class="hide-element">Username</label>
-            <input type="username" name="username" id="username" placeholder="Username" required />
+            <input type="username" name="username" id="username" placeholder="Username" required autocapitalize="off" />
         </div>
         <div class="form-box">
             <label for="password" class="hide-element">Password</label>
-            <input type="password" name="password" id="password" placeholder="Password" required />
+            <input type="password" name="password" id="password" placeholder="Password" required autocapitalize="off" />
         </div>
         <button type="submit" class="btn blue-btn btn-lg btn-block">Submit</button>
     </form>
@@ -23,4 +23,3 @@
 </div>
 
 <%- include('../partials/footer.ejs') %>
-

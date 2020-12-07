@@ -6,7 +6,7 @@
 </div>
 
 
-<div class="show-wrap">
+<div class="show-wrap moveDown">
     <div class="show-heading">
         <h2><%= journal.heading %></h2>
     </div>
@@ -21,11 +21,11 @@
 </div>
 
 <div class="container bottom-btn" id="btns-3">
-    <a href="/journals/edit/<%= journal._id %>" type="button" class="btn blue-btn btn-lg btn-block">Edit</a>
+    <a href="/journals/edit/<%= journal._id %>" class="btn blue-btn btn-lg btn-block">Edit</a>
     <form action="/journals/<%= journal._id %>?_method=DELETE" method="POST" class="d-inline">
         <button type="submit" class="btn transparent-btn btn-lg btn-block">Delete</button>
     </form>
-    <a href="/journals" type="button" class="btn transparent-btn btn-lg btn-block">Go back</a>
+    <a href="/journals" class="btn transparent-btn btn-lg btn-block">Go back</a>
 </div>
 
 

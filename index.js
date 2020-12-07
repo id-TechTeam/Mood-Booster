@@ -206,7 +206,6 @@ app.post("/users/register", checkNotAuthenticated, async (req, res) => {
         passReq.notDescendOrAscend(req.body.password);
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
         var newUser = {
-            id: Date.now().toString(),
             username: req.body.username,
             password: hashedPassword,
         };
@@ -260,11 +259,9 @@ app.get('/getPicture/:selected', async (req, res) => {
             }
         }
         var response = await axios.get('https://api.unsplash.com/photos/random?query=' + selected, config)
-        console.log(response);
 
         response = response.data;
 
-        console.log(response);
         res.send(response);
     } catch (e) {
         console.log("error", e)
@@ -279,7 +276,6 @@ app.get('/getJoke/', async (req, res) => {
         axios.get('https://official-joke-api.appspot.com/jokes/general/random')
             .then(function (response) {
                 // handle success
-                console.log("this is the joke object: ", (response.data[0]))
                 res.send((response.data[0]));
             })
             .catch(function (error) {

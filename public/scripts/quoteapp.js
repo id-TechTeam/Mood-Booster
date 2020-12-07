@@ -11,7 +11,6 @@ const addNewQuote = async () => {
     const quote = await getQuote();
     //we use a random number to display a random quote from the JSON array that is received from the API
     const quoteNumber = Math.floor(Math.random() * 1643);
-    //console.log(quote.data[quoteNumber].text);
     const quoteText = quote.data[quoteNumber].text;
     let quoteAuthor = quote.data[quoteNumber].author;
     //change author to Anonymous if the value is null
